@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CMS</RootNamespace>
     <AssemblyName>CMS.Application</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -102,6 +102,10 @@
     <ProjectReference Include="..\..\..\ABPFramework\Abp\Abp.csproj">
       <Project>{2c221d3b-5f54-4c5b-8082-318636415132}</Project>
       <Name>Abp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\zero\Abp.Zero\Abp.Zero.csproj">
+      <Project>{70d916f2-9bff-43da-b3f7-3e0655114d48}</Project>
+      <Name>Abp.Zero</Name>
     </ProjectReference>
     <ProjectReference Include="..\CMS.Core\CMS.Core.csproj">
       <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
