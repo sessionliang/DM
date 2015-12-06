@@ -23,6 +23,41 @@ namespace CMS.Web
                         )
                 ).AddItem(
                     new MenuItemDefinition(
+                        "Channel",
+                        new LocalizableString("Channel", CMSConsts.LocalizationSourceName),
+                        url: "#/channel",
+                        icon: "fa fa-info"
+                        )
+                        .AddItem(
+                            new MenuItemDefinition(
+                                "Channels",
+                                new LocalizableString("Channels", CMSConsts.LocalizationSourceName),
+                                url: "#/channles",
+                                icon: "fa fa-info")
+                        )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        "Content",
+                        new LocalizableString("Content", CMSConsts.LocalizationSourceName),
+                        url: "#/content",
+                        icon: "fa fa-info"
+                        )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        "Template",
+                        new LocalizableString("Template", CMSConsts.LocalizationSourceName),
+                        url: "#/template",
+                        icon: "fa fa-info"
+                        )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        "Create",
+                        new LocalizableString("Create", CMSConsts.LocalizationSourceName),
+                        url: "#/create",
+                        icon: "fa fa-info"
+                        )
+                ).AddItem(
+                    new MenuItemDefinition(
                         "About",
                         new LocalizableString("About", CMSConsts.LocalizationSourceName),
                         url: "#/about",
