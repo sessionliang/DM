@@ -1,8 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <localizationDictionary culture="en">
   <texts>
+    <!--导航-->
     <text name="HomePage" value="Home page" />
+    
+    <text name="Channel" value="Channel" />
+    <text name="Channels" value="Channels" />
+    
+    <text name="Content" value="Content" />
+    <text name="Template" value="Template" />
+    <text name="Create" value="Create" />
     <text name="About" value="About" />
+    
+    
     <text name="WellcomeMessage" value="Welcome to CMS!" />
     <text name="Home_ThisIsATemplate" value="This project template is a starting point to develop web applicatins using..." />
     <text name="Home_AspNetDescription" value="ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that enables a clean separation of concerns and that gives you full control over markup for enjoyable, agile development." />
