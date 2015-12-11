@@ -1,6 +1,8 @@
 ﻿using System.Data.Common;
+using System.Data.Entity;
 using Abp.Zero.EntityFramework;
 using CMS.Authorization.Roles;
+using CMS.CMSEntities;
 using CMS.MultiTenancy;
 using CMS.Users;
 
@@ -9,6 +11,10 @@ namespace CMS.EntityFramework
     public class CMSDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         //TODO: Define an IDbSet for your Entities...
+
+        public virtual IDbSet<CmsNode> CmsNode { set; get; }
+
+        public virtual IDbSet<CmsModelContent> CmsModelContent { set; get; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
