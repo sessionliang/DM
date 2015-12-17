@@ -1165,7 +1165,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\DM\Node\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\ABPFramework\Abp.AutoMapper\Abp.AutoMapper.csproj">
       <Project>{06eb5f7c-b974-4775-a305-f175d645f7c9}</Project>
