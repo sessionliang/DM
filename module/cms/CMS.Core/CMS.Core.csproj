@@ -75,8 +75,10 @@
     <Compile Include="CMSConsts.cs" />
     <Compile Include="CMSCoreModule.cs" />
     <Compile Include="Authorization\PermissionChecker.cs" />
-    <Compile Include="CMSEntities\CmsModelContent.cs" />
-    <Compile Include="CMSEntities\CmsNode.cs" />
+    <Compile Include="CMSEntities\Model\CmsModelContent.cs" />
+    <Compile Include="CMSEntities\Node\CmsNodeInfo.cs" />
+    <Compile Include="CMSEntities\Node\CmsNodeManager.cs" />
+    <Compile Include="CMSEntities\Node\CmsNodeStore.cs" />
     <Compile Include="Editions\EditionManager.cs" />
     <Compile Include="Features\FeatureValueStore.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />

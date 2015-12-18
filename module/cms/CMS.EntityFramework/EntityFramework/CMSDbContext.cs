@@ -12,7 +12,7 @@ namespace CMS.EntityFramework
     {
         //TODO: Define an IDbSet for your Entities...
 
-        public virtual IDbSet<CmsNode> CmsNode { set; get; }
+        public virtual IDbSet<CmsNodeInfo> CmsNode { set; get; }
 
         public virtual IDbSet<CmsModelContent> CmsModelContent { set; get; }
 

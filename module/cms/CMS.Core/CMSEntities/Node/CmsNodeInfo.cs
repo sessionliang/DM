@@ -9,7 +9,7 @@ namespace CMS.CMSEntities
     /// <summary>
     /// 栏目实体类
     /// </summary>
-    public class CmsNode : AuditedEntity
+    public class CmsNodeInfo : AuditedEntity
     {
         ///// <summary>
         ///// 栏目主键ID
@@ -33,7 +33,7 @@ namespace CMS.CMSEntities
         /// 系统发布ID
         /// </summary>
         [Required, DefaultValue(0)]
-        public int PublishmentSystemId { get; set; }
+        public long PublishmentSystemId { get; set; }
 
         /// <summary>
         /// 内容主键ID
@@ -45,7 +45,7 @@ namespace CMS.CMSEntities
         /// 父级节点主键ID
         /// </summary>
         [Required, DefaultValue(0)]
-        public int ParentId { get; set; }
+        public long ParentId { get; set; }
 
         /// <summary>
         /// 父级节点路径
