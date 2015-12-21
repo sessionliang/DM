@@ -12,9 +12,9 @@ namespace CMS.EntityFramework
     {
         //TODO: Define an IDbSet for your Entities...
 
-        public virtual IDbSet<CmsNodeInfo> CmsNode { set; get; }
+        public virtual IDbSet<NodeInfo> CmsNode { set; get; }
 
-        public virtual IDbSet<CmsModelContent> CmsModelContent { set; get; }
+        public virtual IDbSet<ModelContent> CmsModelContent { set; get; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
