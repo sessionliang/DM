@@ -13,6 +13,12 @@ namespace CMS.CMS
     /// </summary>
     public interface INodeAppService : IApplicationService
     {
-        GetNodesOutput GetNodes(GetNodesInput input);
+        Task<GetNodesOutput> GetNodes(GetNodesInput input);
+        Task<GetNodesOutput> GetNodeById(GetNodesInput input);
+        Task<GetNodesOutput> GetNodesByParentId(GetNodesInput input);
+        Task<GetNodesOutput> GetNodeByNodeIndex(GetNodesInput input);
+        Task<GetNodesOutput> GetNodesByNodeIndex(GetNodesInput input);
+        Task<CreateNodeOutput> CreateNode(CreateNodeInput input);
+        Task<UpdateNodeOutput> UpdateNode(UpdateNodeInput input);
     }
 }

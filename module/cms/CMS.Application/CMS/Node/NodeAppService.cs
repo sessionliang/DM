@@ -31,28 +31,28 @@ namespace CMS.CMS
             //根据ID查询
             if (input.NodeId.HasValue)
             {
-                var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIdAsync(TranslateUtils.GetValueFromNullable<long>(input.NodeId)));
-                output.Nodes.Value.Add(node);
+                var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIdAsync(TranslateUtils.GetInt64ValueFromNullable(input.NodeId)));
+                output.Nodes.Add(node);
                 output.Node = node;
             }
             //根据parentId查询
             else if (input.ParentId.HasValue)
             {
-                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodeByParentIdAsync(TranslateUtils.GetValueFromNullable<long>(input.ParentId)));
+                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodeByParentIdAsync(TranslateUtils.GetInt64ValueFromNullable(input.ParentId)));
                 output.Nodes = nodes;
             }
             //根据nodeIndex查询
             else if (input.NodeIndex.HasValue)
             {
                 var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIndexAsync(input.PublishmentSystemId,
-                    TranslateUtils.GetValueFromNullable<string>(input.NodeIndex)));
-                output.Nodes.Value.Add(node);
+                    TranslateUtils.GetStringValueFromNullable(input.NodeIndex)));
+                output.Nodes.Add(node);
                 output.Node = node;
             }
             //根据nodeName查询
             else if (input.NodeName.HasValue)
             {
-                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodesByNodeNameAsync(input.PublishmentSystemId, TranslateUtils.GetValueFromNullable<string>(input.NodeName)));
+                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodesByNodeNameAsync(input.PublishmentSystemId, TranslateUtils.GetStringValueFromNullable(input.NodeName)));
                 output.Nodes = nodes;
             }
             return output;
@@ -69,8 +69,8 @@ namespace CMS.CMS
             //根据ID查询
             if (input.NodeId.HasValue)
             {
-                var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIdAsync(TranslateUtils.GetValueFromNullable<long>(input.NodeId)));
-                output.Nodes.Value.Add(node);
+                var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIdAsync(TranslateUtils.GetInt64ValueFromNullable(input.NodeId)));
+                output.Nodes.Add(node);
                 output.Node = node;
             }
             return output;
@@ -87,7 +87,7 @@ namespace CMS.CMS
             //根据parentId查询
             if (input.ParentId.HasValue)
             {
-                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodeByParentIdAsync(TranslateUtils.GetValueFromNullable<long>(input.ParentId)));
+                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodeByParentIdAsync(TranslateUtils.GetInt64ValueFromNullable(input.ParentId)));
                 output.Nodes = nodes;
             }
             return output;
@@ -105,8 +105,8 @@ namespace CMS.CMS
             if (input.NodeIndex.HasValue)
             {
                 var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIndexAsync(input.PublishmentSystemId,
-                    TranslateUtils.GetValueFromNullable<string>(input.NodeIndex)));
-                output.Nodes.Value.Add(node);
+                    TranslateUtils.GetStringValueFromNullable(input.NodeIndex)));
+                output.Nodes.Add(node);
                 output.Node = node;
             }
             return output;
@@ -124,7 +124,7 @@ namespace CMS.CMS
             if (input.NodeName.HasValue)
             {
                 var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodesByNodeNameAsync(input.PublishmentSystemId,
-                    TranslateUtils.GetValueFromNullable<string>(input.NodeName)));
+                    TranslateUtils.GetStringValueFromNullable(input.NodeName)));
                 output.Nodes = nodes;
             }
             return output;
@@ -142,10 +142,10 @@ namespace CMS.CMS
             {
                 PublishmentSystemId = input.PublishmentSystemId,
                 NodeName = input.NodeName,
-                NodeIndexName = TranslateUtils.GetValueFromNullable<string>(input.NodeIndex),
-                ChannelTemplateId = TranslateUtils.GetValueFromNullable<int>(input.ChannelTemplateId),
-                ContentTemplateId = TranslateUtils.GetValueFromNullable<int>(input.ContentTemplateId),
-                ContentModelId = TranslateUtils.GetValueFromNullable<string>(input.ContentModelId)
+                NodeIndexName = TranslateUtils.GetStringValueFromNullable(input.NodeIndex),
+                ChannelTemplateId = TranslateUtils.GetInt64ValueFromNullable(input.ChannelTemplateId),
+                ContentTemplateId = TranslateUtils.GetInt64ValueFromNullable(input.ContentTemplateId),
+                ContentModelId = TranslateUtils.GetStringValueFromNullable(input.ContentModelId)
             };
 
             if (!input.ParentId.HasValue)

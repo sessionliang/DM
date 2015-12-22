@@ -12,11 +12,11 @@ namespace CMS.CMS.Dto
         /// <summary>
         /// 查询集合的时候
         /// </summary>
-        public IList<NodeDto>? Nodes { get; set; }
+        public IList<NodeDto> Nodes { get; set; }
 
         /// <summary>
         /// 查询个体的时候
         /// </summary>
-        public NodeDto? Node { get; set; }
+        public NodeDto Node { get; set; }
     }
 }

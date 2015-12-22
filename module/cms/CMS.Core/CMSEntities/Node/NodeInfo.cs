@@ -3,13 +3,15 @@ using Abp.Domain.Entities;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Abp.Domain.Entities.Auditing;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CMS.CMSEntities
 {
     /// <summary>
     /// 栏目实体类
     /// </summary>
-    public class NodeInfo : AuditedEntity
+    [Table("cms_Nodes")]
+    public class NodeInfo : FullAuditedEntity<long>, IMustHaveTenant
     {
         ///// <summary>
         ///// 栏目主键ID
@@ -174,7 +176,7 @@ namespace CMS.CMSEntities
         public string ExtendValues { get; set; }
 
 
-        #region 字段对照 
+        #region 字段对照
         //[NodeID] [int] IDENTITY(1,1) NOT NULL,
         //[NodeName] [nvarchar](255) NOT NULL DEFAULT (''),
         //[NodeType] [varchar](50) NOT NULL DEFAULT (''),
@@ -205,5 +207,11 @@ namespace CMS.CMSEntities
         //[ExtendValues] [ntext] NOT NULL DEFAULT (''), 
         #endregion
 
+
+        public int TenantId
+        {
+            get;
+            set;
+        }
     }
 }

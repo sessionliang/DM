@@ -12,6 +12,6 @@ namespace CMS.CMS.Dto
         /// <summary>
         /// 查询个体的时候
         /// </summary>
-        public NodeDto? Node { get; set; }
+        public NodeDto Node { get; set; }
     }
 }

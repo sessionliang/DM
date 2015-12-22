@@ -8,15 +8,27 @@ namespace CMS.Common
 {
     public class TranslateUtils
     {
-        public static T GetValueFromNullable<T>(object value)
+        public static string GetStringValueFromNullable(Nullable<string> value)
         {
-            if (value != null)
+            if (value.HasValue)
             {
-                return (T)Convert.ChangeType(value, typeof(T));
+                return (string)Convert.ChangeType(value.Value, typeof(string));
             }
             else
             {
-                return default(T);
+                return string.Empty;
+            }
+        }
+
+        public static long GetInt64ValueFromNullable(Nullable<long> value)
+        {
+            if (value.HasValue)
+            {
+                return (long)Convert.ChangeType(value.Value, typeof(long));
+            }
+            else
+            {
+                return 0;
             }
         }
     }
