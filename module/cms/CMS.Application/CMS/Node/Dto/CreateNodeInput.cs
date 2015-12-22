@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace CMS.CMS.Dto
 {
-    public class GetNodesInput : IInputDto
+    public class CreateNodeInput : CMSInputDtoBase
     {
-        public long? NodeId { get; set; }
         public string? NodeIndex { get; set; }
-        public string? NodeName { get; set; }
-
+        public string NodeName { get; set; }
         public long? ParentId { get; set; }
+        public long? ChannelTemplateId { get; set; }
+        public long? ContentTemplateId { get; set; }
+        public string? ContentModelId { get; set; }
     }
 }

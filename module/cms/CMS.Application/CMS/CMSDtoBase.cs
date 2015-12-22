@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMS.CMS.Dto
+namespace CMS.CMS
 {
-    public class GetNodesOutput : IOutputDto
+    public class CMSInputDtoBase : IInputDto
     {
-        public Task<IList<NodeDto>> Nodes { get; set; }
+        public long PublishmentSystemId { get; set; }
     }
 }

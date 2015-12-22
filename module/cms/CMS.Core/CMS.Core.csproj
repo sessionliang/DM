@@ -79,6 +79,7 @@
     <Compile Include="CMSEntities\Node\NodeInfo.cs" />
     <Compile Include="CMSEntities\Node\NodeManager.cs" />
     <Compile Include="CMSEntities\Node\NodeStore.cs" />
+    <Compile Include="Common\TranslateUtils.cs" />
     <Compile Include="Editions\EditionManager.cs" />
     <Compile Include="Features\FeatureValueStore.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />

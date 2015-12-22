@@ -36,7 +36,7 @@ namespace CMS.CMSEntities
         public long PublishmentSystemId { get; set; }
 
         /// <summary>
-        /// 内容主键ID
+        /// 内容模型ID
         /// </summary>
         [Required, MaxLength(50), DefaultValue("")]
         public string ContentModelId { get; set; }
@@ -147,13 +147,13 @@ namespace CMS.CMSEntities
         /// 频道模版ID
         /// </summary>
         [Required, DefaultValue(0)]
-        public int ChannelTemplateId { get; set; }
+        public long ChannelTemplateId { get; set; }
 
         /// <summary>
         /// 内容模版ID
         /// </summary>
         [Required, DefaultValue(0)]
-        public int ContentTemplateId { get; set; }
+        public long ContentTemplateId { get; set; }
 
         /// <summary>
         /// 关键字
