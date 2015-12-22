@@ -3,13 +3,15 @@ using Abp.Domain.Entities;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Abp.Domain.Entities.Auditing;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CMS.CMSEntities
 {
     /// <summary>
     /// 栏目实体类
     /// </summary>
-    public class CmsNodeInfo : AuditedEntity
+    [Table("cms_Nodes")]
+    public class NodeInfo : FullAuditedEntity<long>, IMustHaveTenant
     {
         ///// <summary>
         ///// 栏目主键ID
@@ -36,7 +38,7 @@ namespace CMS.CMSEntities
         public long PublishmentSystemId { get; set; }
 
         /// <summary>
-        /// 内容主键ID
+        /// 内容模型ID
         /// </summary>
         [Required, MaxLength(50), DefaultValue("")]
         public string ContentModelId { get; set; }
@@ -147,13 +149,13 @@ namespace CMS.CMSEntities
         /// 频道模版ID
         /// </summary>
         [Required, DefaultValue(0)]
-        public int ChannelTemplateId { get; set; }
+        public long ChannelTemplateId { get; set; }
 
         /// <summary>
         /// 内容模版ID
         /// </summary>
         [Required, DefaultValue(0)]
-        public int ContentTemplateId { get; set; }
+        public long ContentTemplateId { get; set; }
 
         /// <summary>
         /// 关键字
@@ -174,7 +176,7 @@ namespace CMS.CMSEntities
         public string ExtendValues { get; set; }
 
 
-        #region 字段对照 
+        #region 字段对照
         //[NodeID] [int] IDENTITY(1,1) NOT NULL,
         //[NodeName] [nvarchar](255) NOT NULL DEFAULT (''),
         //[NodeType] [varchar](50) NOT NULL DEFAULT (''),
@@ -205,5 +207,11 @@ namespace CMS.CMSEntities
         //[ExtendValues] [ntext] NOT NULL DEFAULT (''), 
         #endregion
 
+
+        public int TenantId
+        {
+            get;
+            set;
+        }
     }
 }

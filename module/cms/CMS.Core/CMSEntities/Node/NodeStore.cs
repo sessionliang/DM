@@ -1,4 +1,5 @@
-﻿using Abp.Domain.Repositories;
+﻿using Abp.Domain.Entities;
+using Abp.Domain.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace CMS.CMSEntities.Node
 {
-    public class CmsNodeStore<TNodeInfo>
-        where TNodeInfo : CmsNodeInfo
+    public class NodeStore<TNodeInfo>
+        where TNodeInfo : NodeInfo
     {
         /// <summary>
         /// 栏目仓储
@@ -19,7 +20,7 @@ namespace CMS.CMSEntities.Node
         /// 构造器
         /// </summary>
         /// <param name="cmsNodeRepository"></param>
-        public CmsNodeStore(IRepository<TNodeInfo, long> cmsNodeRepository)
+        public NodeStore(IRepository<TNodeInfo, long> cmsNodeRepository)
         {
             _cmsNodeRepository = cmsNodeRepository;
         }
@@ -29,9 +30,9 @@ namespace CMS.CMSEntities.Node
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        public virtual async Task CreateAsync(TNodeInfo node)
+        public virtual async Task<TNodeInfo> CreateAsync(TNodeInfo node)
         {
-            await _cmsNodeRepository.InsertAsync(node);
+            return await _cmsNodeRepository.InsertAsync(node);
         }
 
         /// <summary>
@@ -49,9 +50,9 @@ namespace CMS.CMSEntities.Node
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        public virtual async Task UpdateAsync(TNodeInfo node)
+        public virtual async Task<TNodeInfo> UpdateAsync(TNodeInfo node)
         {
-            await _cmsNodeRepository.UpdateAsync(node);
+            return await _cmsNodeRepository.UpdateAsync(node);
         }
 
         /// <summary>
@@ -87,9 +88,21 @@ namespace CMS.CMSEntities.Node
         /// </summary>
         /// <param name="nodeId"></param>
         /// <returns></returns>
-        public virtual Task<TNodeInfo> FindByIdAsync(long nodeId)
+        public virtual async Task<TNodeInfo> FindByIdAsync(long nodeId)
         {
-            return _cmsNodeRepository.FirstOrDefaultAsync(nodeId);
+            return await _cmsNodeRepository.FirstOrDefaultAsync(nodeId);
+        }
+
+        /// <summary>
+        /// 根据栏目父级Id获取栏目
+        /// </summary>
+        /// <param name="parentId"></param>
+        /// <returns></returns>
+        public virtual async Task<IList<TNodeInfo>> FindByParentIdAsync(long parentId)
+        {
+            return await _cmsNodeRepository.GetAllListAsync(
+                    node => node.ParentId == parentId
+                );
         }
 
         /// <summary>
@@ -97,10 +110,10 @@ namespace CMS.CMSEntities.Node
         /// </summary>
         /// <param name="nodeName"></param>
         /// <returns></returns>
-        public virtual async Task<TNodeInfo> FindByNameAsync(long publishmentSystemId, string nodeName)
+        public virtual async Task<IList<TNodeInfo>> FindByNameAsync(long publishmentSystemId, string nodeName)
         {
-            return await _cmsNodeRepository.FirstOrDefaultAsync(
-                    node => node.NodeName == nodeName && node.PublishmentSystemId == publishmentSystemId
+            return await _cmsNodeRepository.GetAllListAsync(
+                                                    node => node.NodeName == nodeName && node.PublishmentSystemId == publishmentSystemId
                 );
         }
 
