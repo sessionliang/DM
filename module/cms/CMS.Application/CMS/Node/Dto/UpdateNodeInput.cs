@@ -10,11 +10,11 @@ namespace CMS.CMS.Dto
     public class UpdateNodeInput : CMSInputDtoBase
     {
         public long NodeId { get; set; }
-        public string? NodeIndex { get; set; }
-        public string? NodeName { get; set; }
+        public string NodeIndex { get; set; }
+        public string NodeName { get; set; }
         public long? ParentId { get; set; }
         public long? ChannelTemplateId { get; set; }
         public long? ContentTemplateId { get; set; }
-        public string? ContentModelId { get; set; }
+        public string ContentModelId { get; set; }
     }
 }

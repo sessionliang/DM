@@ -87,9 +87,9 @@
     <Compile Include="Migrations\201512011354360_CMS_Initial.Designer.cs">
       <DependentUpon>201512011354360_CMS_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201512090321061_InitCmsNodeAndCmsModelContent.cs" />
-    <Compile Include="Migrations\201512090321061_InitCmsNodeAndCmsModelContent.Designer.cs">
-      <DependentUpon>201512090321061_InitCmsNodeAndCmsModelContent.cs</DependentUpon>
+    <Compile Include="Migrations\201512230814161_InitialCreate.cs" />
+    <Compile Include="Migrations\201512230814161_InitialCreate.Designer.cs">
+      <DependentUpon>201512230814161_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="CMSDataModule.cs" />
@@ -128,8 +128,8 @@
     <EmbeddedResource Include="Migrations\201512011354360_CMS_Initial.resx">
       <DependentUpon>201512011354360_CMS_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512090321061_InitCmsNodeAndCmsModelContent.resx">
-      <DependentUpon>201512090321061_InitCmsNodeAndCmsModelContent.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512230814161_InitialCreate.resx">
+      <DependentUpon>201512230814161_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
