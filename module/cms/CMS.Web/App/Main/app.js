@@ -42,11 +42,6 @@
                     url: 'create',
                     templateUrl: '/App/Main/views/create/create.cshtml',
                     menu: 'Create'
-                })
-                .state('about', {
-                    url: '/about',
-                    templateUrl: '/App/Main/views/about/about.cshtml',
-                    menu: 'About' //Matches to name of 'About' menu in CMSNavigationProvider
                 });
         }
     ]);
