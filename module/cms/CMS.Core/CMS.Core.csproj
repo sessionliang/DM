@@ -75,7 +75,7 @@
     <Compile Include="CMSConsts.cs" />
     <Compile Include="CMSCoreModule.cs" />
     <Compile Include="Authorization\PermissionChecker.cs" />
-    <Compile Include="CMSEntities\Model\ModelContent.cs" />
+    <Compile Include="CMSEntities\Model\ContentInfo.cs" />
     <Compile Include="CMSEntities\Node\NodeInfo.cs" />
     <Compile Include="CMSEntities\Node\NodeManager.cs" />
     <Compile Include="CMSEntities\Node\NodeStore.cs" />

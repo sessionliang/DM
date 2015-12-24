@@ -11,7 +11,7 @@ namespace CMS.CMS.Dto
     {
         public long NodeId { get; set; }
         public string NodeName { get; set; }
-        public string? NodeIndex { get; set; }
+        public string NodeIndex { get; set; }
         public long ParentId { get; set; }
         public override string ToString()
         {

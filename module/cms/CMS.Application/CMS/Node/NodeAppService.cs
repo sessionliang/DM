@@ -31,28 +31,28 @@ namespace CMS.CMS
             //根据ID查询
             if (input.NodeId.HasValue)
             {
-                var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIdAsync(TranslateUtils.GetInt64ValueFromNullable(input.NodeId)));
+                var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIdAsync(input.NodeId.Value));
                 output.Nodes.Add(node);
                 output.Node = node;
             }
             //根据parentId查询
             else if (input.ParentId.HasValue)
             {
-                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodeByParentIdAsync(TranslateUtils.GetInt64ValueFromNullable(input.ParentId)));
+                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodeByParentIdAsync(input.ParentId.Value));
                 output.Nodes = nodes;
             }
             //根据nodeIndex查询
-            else if (input.NodeIndex.HasValue)
+            else if (!string.IsNullOrEmpty(input.NodeIndex))
             {
                 var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIndexAsync(input.PublishmentSystemId,
-                    TranslateUtils.GetStringValueFromNullable(input.NodeIndex)));
+                    input.NodeIndex));
                 output.Nodes.Add(node);
                 output.Node = node;
             }
             //根据nodeName查询
-            else if (input.NodeName.HasValue)
+            else if (!string.IsNullOrEmpty(input.NodeName))
             {
-                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodesByNodeNameAsync(input.PublishmentSystemId, TranslateUtils.GetStringValueFromNullable(input.NodeName)));
+                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodesByNodeNameAsync(input.PublishmentSystemId, input.NodeName));
                 output.Nodes = nodes;
             }
             return output;
@@ -69,7 +69,7 @@ namespace CMS.CMS
             //根据ID查询
             if (input.NodeId.HasValue)
             {
-                var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIdAsync(TranslateUtils.GetInt64ValueFromNullable(input.NodeId)));
+                var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIdAsync(input.NodeId.Value));
                 output.Nodes.Add(node);
                 output.Node = node;
             }
@@ -87,7 +87,7 @@ namespace CMS.CMS
             //根据parentId查询
             if (input.ParentId.HasValue)
             {
-                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodeByParentIdAsync(TranslateUtils.GetInt64ValueFromNullable(input.ParentId)));
+                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodeByParentIdAsync(input.ParentId.Value));
                 output.Nodes = nodes;
             }
             return output;
@@ -102,10 +102,10 @@ namespace CMS.CMS
         {
             GetNodesOutput output = new GetNodesOutput();
             //根据publishmentSystemId, nodeIndex查询
-            if (input.NodeIndex.HasValue)
+            if (!string.IsNullOrEmpty(input.NodeIndex))
             {
                 var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIndexAsync(input.PublishmentSystemId,
-                    TranslateUtils.GetStringValueFromNullable(input.NodeIndex)));
+                    input.NodeIndex));
                 output.Nodes.Add(node);
                 output.Node = node;
             }
@@ -121,10 +121,10 @@ namespace CMS.CMS
         {
             GetNodesOutput output = new GetNodesOutput();
             //根据publishmentSystemId, nodeName查询
-            if (input.NodeName.HasValue)
+            if (!string.IsNullOrEmpty(input.NodeName))
             {
                 var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodesByNodeNameAsync(input.PublishmentSystemId,
-                    TranslateUtils.GetStringValueFromNullable(input.NodeName)));
+                    input.NodeName));
                 output.Nodes = nodes;
             }
             return output;
@@ -141,16 +141,31 @@ namespace CMS.CMS
             var nodeInfo = new NodeInfo()
             {
                 PublishmentSystemId = input.PublishmentSystemId,
-                NodeName = input.NodeName,
-                NodeIndexName = TranslateUtils.GetStringValueFromNullable(input.NodeIndex),
-                ChannelTemplateId = TranslateUtils.GetInt64ValueFromNullable(input.ChannelTemplateId),
-                ContentTemplateId = TranslateUtils.GetInt64ValueFromNullable(input.ContentTemplateId),
-                ContentModelId = TranslateUtils.GetStringValueFromNullable(input.ContentModelId)
+                NodeName = input.NodeName
             };
-
-            if (!input.ParentId.HasValue)
+            if (!string.IsNullOrEmpty(input.NodeIndex))
             {
-                input.ParentId = input.PublishmentSystemId;
+                nodeInfo.NodeIndexName = input.NodeIndex;
+            }
+            if (input.ChannelTemplateId.HasValue)
+            {
+                nodeInfo.ChannelTemplateId = input.ChannelTemplateId.Value;
+            }
+            if (input.ContentTemplateId.HasValue)
+            {
+                nodeInfo.ContentTemplateId = input.ContentTemplateId.Value;
+            }
+            if (!string.IsNullOrEmpty(input.ContentModelId))
+            {
+                nodeInfo.ContentModelId = input.ContentModelId;
+            }
+            if (input.ParentId.HasValue)
+            {
+                nodeInfo.ParentId = input.ParentId.Value;
+            }
+            else
+            {
+                nodeInfo.ParentId = input.PublishmentSystemId;
             }
             return Mapper.Map<CreateNodeOutput>(await _nodeManager.InsertAsync(nodeInfo));
         }
@@ -164,13 +179,13 @@ namespace CMS.CMS
         {
             var node = await _nodeManager.GetNodeByNodeIdAsync(input.NodeId);
 
-            if (input.NodeName.HasValue)
+            if (!string.IsNullOrEmpty(input.NodeName))
             {
-                node.NodeName = input.NodeName.Value;
+                node.NodeName = input.NodeName;
             }
-            if (input.NodeIndex.HasValue)
+            if (!string.IsNullOrEmpty(input.NodeIndex))
             {
-                node.NodeIndexName = input.NodeIndex.Value;
+                node.NodeIndexName = input.NodeIndex;
             }
             if (input.ChannelTemplateId.HasValue)
             {
@@ -180,9 +195,9 @@ namespace CMS.CMS
             {
                 node.ContentTemplateId = input.ContentTemplateId.Value;
             }
-            if (input.ContentModelId.HasValue)
+            if (!string.IsNullOrEmpty(input.ContentModelId))
             {
-                node.ContentModelId = input.ContentModelId.Value;
+                node.ContentModelId = input.ContentModelId;
             }
 
             return Mapper.Map<UpdateNodeOutput>(await _nodeManager.UpdateAsync(node));

@@ -10,7 +10,7 @@ namespace CMS.CMSEntities
     /// <summary>
     /// 栏目实体类
     /// </summary>
-    [Table("cms_Nodes")]
+    [Table("dm_Node")]
     public class NodeInfo : FullAuditedEntity<long>, IMustHaveTenant
     {
         ///// <summary>
