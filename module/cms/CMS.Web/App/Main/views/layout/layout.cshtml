@@ -48,8 +48,8 @@
     <link href="/Abp/UI/css/style.min.css?v=4.0.0" rel="stylesheet">
     <!--UI End-->
 </head>
-<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
-    <div id="wrapper" ng-app="app" ng-controller="app.views.layout as vm">
+<body ng-app="app" class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div id="wrapper" ng-controller="app.views.layout as vm">
         <!--左侧导航开始-->
         @Html.Partial("~/App/Main/views/layout/navigate.cshtml")
         <!--左侧导航结束-->

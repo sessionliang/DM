@@ -5569,3 +5569,348 @@ System.InvalidOperationException: The partial view '~/Abp/Main/views/layout/navi
    在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
    在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2015-12-24 13:12:46,351 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-24 13:12:48,555 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-24 13:12:48,558 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,560 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,560 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,560 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,560 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,560 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,560 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,560 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,561 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,561 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,561 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,561 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,561 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:12:48,565 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-24 13:12:48,581 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:12:48,581 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:12:48,581 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:12:48,581 [1    ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:12:50,654 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-24 13:12:50,658 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-24 13:12:50,658 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-24 13:12:50,659 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-24 13:12:50,659 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-24 13:12:52,311 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-24 13:12:52,311 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-24 13:12:52,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-24 13:12:52,355 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-24 13:12:52,374 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-24 13:12:52,375 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-24 13:12:52,376 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-24 13:12:52,376 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+ERROR 2015-12-24 13:23:30,339 [30   ] .Mvc.Controllers.AbpHandleErrorAttribute - System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+ERROR 2015-12-24 13:23:35,009 [30   ] .Mvc.Controllers.AbpHandleErrorAttribute - System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+ERROR 2015-12-24 13:26:55,447 [42   ] .Mvc.Controllers.AbpHandleErrorAttribute - System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+ERROR 2015-12-24 13:35:46,338 [81   ] .Mvc.Controllers.AbpHandleErrorAttribute - System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+ERROR 2015-12-24 13:36:22,623 [84   ] .Mvc.Controllers.AbpHandleErrorAttribute - System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2015-12-24 13:40:22,254 [92   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-24 13:40:24,065 [92   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-24 13:40:24,067 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,069 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,069 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,069 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,069 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,069 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,069 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,070 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,070 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,070 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,070 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,070 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,070 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:40:24,073 [92   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-24 13:40:24,090 [92   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:40:24,091 [92   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:40:24,091 [92   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:40:24,091 [92   ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:40:26,438 [92   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-24 13:40:26,442 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-24 13:40:26,442 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-24 13:40:26,443 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-24 13:40:26,443 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-24 13:40:27,977 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-24 13:40:27,977 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-24 13:40:28,021 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-24 13:40:28,024 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-24 13:40:28,044 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-24 13:40:28,045 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-24 13:40:28,045 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-24 13:40:28,046 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+ERROR 2015-12-24 13:41:10,026 [81   ] .Mvc.Controllers.AbpHandleErrorAttribute - System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+ERROR 2015-12-24 13:41:12,543 [84   ] .Mvc.Controllers.AbpHandleErrorAttribute - System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+ERROR 2015-12-24 13:42:08,712 [84   ] .Mvc.Controllers.AbpHandleErrorAttribute - System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+ERROR 2015-12-24 13:42:15,984 [86   ] .Mvc.Controllers.AbpHandleErrorAttribute - System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+System.InvalidOperationException: The view '~/App/Main/views/template/template.cshtml' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/App/Main/views/template/template.cshtml
+   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2015-12-24 13:43:45,461 [92   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-24 13:43:47,781 [92   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-24 13:43:47,784 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,786 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,786 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,786 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,786 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,786 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,786 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,786 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,787 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,787 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,787 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,787 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,787 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:43:47,790 [92   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-24 13:43:47,807 [92   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:43:47,807 [92   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:43:47,807 [92   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:43:47,807 [92   ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:43:49,953 [92   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-24 13:43:49,956 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-24 13:43:49,957 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-24 13:43:49,957 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-24 13:43:49,957 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-24 13:43:51,641 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-24 13:43:51,641 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-24 13:43:51,682 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-24 13:43:51,686 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-24 13:43:51,705 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-24 13:43:51,705 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-24 13:43:51,706 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-24 13:43:51,707 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-24 13:44:48,675 [82   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-24 13:44:50,944 [82   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-24 13:44:50,946 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,948 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,948 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,949 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,949 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,949 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,949 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,949 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,949 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,949 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,950 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,950 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,950 [82   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:44:50,953 [82   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-24 13:44:50,970 [82   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:44:50,970 [82   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:44:50,970 [82   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:44:50,970 [82   ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:44:53,128 [82   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-24 13:44:53,131 [82   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-24 13:44:53,132 [82   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-24 13:44:53,132 [82   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-24 13:44:53,133 [82   ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-24 13:44:54,853 [82   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-24 13:44:54,853 [82   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-24 13:44:54,895 [82   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-24 13:44:54,898 [82   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-24 13:44:54,917 [82   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-24 13:44:54,917 [82   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-24 13:44:54,918 [82   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-24 13:44:54,919 [82   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-24 13:48:42,778 [92   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-24 13:48:45,322 [92   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-24 13:48:45,325 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,326 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,327 [92   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-24 13:48:45,331 [92   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-24 13:48:45,348 [92   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:48:45,348 [92   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:48:45,349 [92   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:48:45,349 [92   ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-24 13:48:48,099 [92   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-24 13:48:48,102 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-24 13:48:48,103 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-24 13:48:48,103 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-24 13:48:48,104 [92   ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-24 13:48:50,033 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-24 13:48:50,033 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-24 13:48:50,085 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-24 13:48:50,088 [92   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-24 13:48:50,108 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-24 13:48:50,109 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-24 13:48:50,109 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-24 13:48:50,110 [92   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.

@@ -795,12 +795,15 @@
       <DependentUpon>main.css</DependentUpon>
     </Content>
     <Content Include="App\Main\services\appSession.js" />
+    <Content Include="App\Main\views\channel\channels\channels.js" />
     <Content Include="App\Main\views\content\content.js" />
     <Content Include="App\Main\views\channel\channel.js" />
+    <Content Include="App\Main\views\layout\navigate.js" />
     <Content Include="App\Main\views\layout\header.js" />
     <Content Include="App\Main\views\layout\layout.js" />
     <Content Include="App\Main\views\home\home.js" />
-    <Content Include="App\Main\views\about\about.js" />
+    <Content Include="App\Main\views\create\create.js" />
+    <Content Include="App\Main\views\template\template.js" />
     <Content Include="Content\bootstrap-cosmo.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -853,7 +856,6 @@
     <Content Include="App\Main\main.less" />
     <Content Include="App\Main\views\layout\layout.cshtml" />
     <Content Include="App\Main\views\home\home.cshtml" />
-    <Content Include="App\Main\views\about\about.cshtml" />
     <Content Include="App\Main\web.config" />
     <Content Include="log4net.config" />
     <Content Include="App\Main\views\layout\header.cshtml" />
@@ -958,6 +960,9 @@
     <Content Include="App\Main\views\layout\bottom.cshtml" />
     <Content Include="App\Main\views\layout\right.cshtml" />
     <Content Include="App\Main\views\layout\message.cshtml" />
+    <Content Include="App\Main\views\template\template.cshtml" />
+    <Content Include="App\Main\views\create\create.cshtml" />
+    <Content Include="App\Main\views\channel\channels\channels.cshtml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
