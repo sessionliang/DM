@@ -1753,6 +1753,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ChannelController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CMSControllerBase.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
@@ -1787,6 +1788,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\Channel\" />
     <Folder Include="Views\DM\Node\" />
   </ItemGroup>
   <ItemGroup>
