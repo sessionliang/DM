@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
+using CMS.Common;
 
 namespace CMS.Web
 {
@@ -18,42 +19,42 @@ namespace CMS.Web
                     new MenuItemDefinition(
                         "Home",
                         new LocalizableString("HomePage", CMSConsts.LocalizationSourceName),
-                        url: "/",
+                        url: PageUtils.GetCMSAdminControllerUrl("/"),
                         icon: "fa fa-home"
                         )
                 ).AddItem(
                     new MenuItemDefinition(
                         "Channel",
                         new LocalizableString("Channel", CMSConsts.LocalizationSourceName),
-                        url: "/channel",
+                        url: PageUtils.GetCMSAdminControllerUrl("/channel"),
                         icon: "fa fa-columns"
                         )
                         .AddItem(
                             new MenuItemDefinition(
                                 "Channels",
                                 new LocalizableString("Channels", CMSConsts.LocalizationSourceName),
-                                url: "/channel/channels",
+                                url: PageUtils.GetCMSAdminControllerUrl("/channel/channels"),
                                 icon: "fa fa-info")
                         )
                 ).AddItem(
                     new MenuItemDefinition(
                         "Content",
                         new LocalizableString("Content", CMSConsts.LocalizationSourceName),
-                        url: "/content",
+                        url: PageUtils.GetCMSAdminControllerUrl("/content"),
                         icon: "fa fa-envelope"
                         )
                 ).AddItem(
                     new MenuItemDefinition(
                         "Template",
                         new LocalizableString("Template", CMSConsts.LocalizationSourceName),
-                        url: "/template",
+                        url: PageUtils.GetCMSAdminControllerUrl("/template"),
                         icon: "fa fa-edit"
                         )
                 ).AddItem(
                     new MenuItemDefinition(
                         "Create",
                         new LocalizableString("Create", CMSConsts.LocalizationSourceName),
-                        url: "/create",
+                        url: PageUtils.GetCMSAdminControllerUrl("/create"),
                         icon: "fa fa-cutlery"
                         )
                 );

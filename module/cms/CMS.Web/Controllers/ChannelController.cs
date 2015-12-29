@@ -16,7 +16,7 @@ namespace CMS.Web.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            return View(PageUtils.GetCMSAdminUrl("channel/channels.cshtml"));
+            return View(PageUtils.GetCMSAdminViewUrl("channel/channels.cshtml"));
         }
 
         /// <summary>
