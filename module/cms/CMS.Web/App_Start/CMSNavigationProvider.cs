@@ -18,42 +18,42 @@ namespace CMS.Web
                     new MenuItemDefinition(
                         "Home",
                         new LocalizableString("HomePage", CMSConsts.LocalizationSourceName),
-                        url: "#/",
+                        url: "/",
                         icon: "fa fa-home"
                         )
                 ).AddItem(
                     new MenuItemDefinition(
                         "Channel",
                         new LocalizableString("Channel", CMSConsts.LocalizationSourceName),
-                        url: "#/channel",
+                        url: "/channel",
                         icon: "fa fa-columns"
                         )
                         .AddItem(
                             new MenuItemDefinition(
                                 "Channels",
                                 new LocalizableString("Channels", CMSConsts.LocalizationSourceName),
-                                url: "#/channel/channels",
+                                url: "/channel/channels",
                                 icon: "fa fa-info")
                         )
                 ).AddItem(
                     new MenuItemDefinition(
                         "Content",
                         new LocalizableString("Content", CMSConsts.LocalizationSourceName),
-                        url: "#/content",
+                        url: "/content",
                         icon: "fa fa-envelope"
                         )
                 ).AddItem(
                     new MenuItemDefinition(
                         "Template",
                         new LocalizableString("Template", CMSConsts.LocalizationSourceName),
-                        url: "#/template",
+                        url: "/template",
                         icon: "fa fa-edit"
                         )
                 ).AddItem(
                     new MenuItemDefinition(
                         "Create",
                         new LocalizableString("Create", CMSConsts.LocalizationSourceName),
-                        url: "#/create",
+                        url: "/create",
                         icon: "fa fa-cutlery"
                         )
                 );
