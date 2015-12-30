@@ -6284,3 +6284,333 @@ DEBUG 2015-12-25 18:53:39,997 [24   ] Abp.Logging.LogHelper                    -
 DEBUG 2015-12-25 18:53:39,998 [24   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
 DEBUG 2015-12-25 18:53:39,999 [24   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
 DEBUG 2015-12-25 18:53:39,999 [24   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-30 14:20:41,838 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-30 14:20:48,073 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-30 14:20:48,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,079 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,079 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,079 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:20:48,082 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-30 14:20:48,099 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:20:48,099 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:20:48,100 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:20:48,100 [1    ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:20:53,051 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-30 14:20:53,055 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-30 14:20:53,056 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-30 14:20:53,057 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-30 14:20:53,057 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-30 14:20:55,826 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-30 14:20:55,826 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-30 14:20:56,048 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-30 14:20:56,053 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-30 14:20:56,077 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-30 14:20:56,078 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-30 14:20:56,078 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-30 14:20:56,079 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-30 14:21:07,987 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-30 14:21:10,302 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-30 14:21:10,304 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,306 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,306 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,306 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,306 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,306 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,306 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,306 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:21:10,310 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-30 14:21:10,327 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:21:10,327 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:21:10,327 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:21:10,327 [1    ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:21:13,246 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-30 14:21:13,250 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-30 14:21:13,251 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-30 14:21:13,251 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-30 14:21:13,252 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-30 14:21:15,223 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-30 14:21:15,224 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-30 14:21:15,265 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-30 14:21:15,269 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-30 14:21:15,288 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-30 14:21:15,289 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-30 14:21:15,290 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-30 14:21:15,291 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-30 14:35:43,012 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-30 14:35:45,118 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-30 14:35:45,121 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,123 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,123 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,124 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,124 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,124 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,124 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,124 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,124 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,124 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,125 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,125 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,125 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:35:45,128 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-30 14:35:45,144 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:35:45,144 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:35:45,144 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:35:45,144 [1    ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:35:47,069 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-30 14:35:47,074 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-30 14:35:47,074 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-30 14:35:47,074 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-30 14:35:47,075 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-30 14:35:48,579 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-30 14:35:48,579 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-30 14:35:48,679 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-30 14:35:48,684 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-30 14:35:48,707 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-30 14:35:48,708 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-30 14:35:48,708 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-30 14:35:48,709 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-30 14:36:23,444 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-30 14:36:27,834 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-30 14:36:27,837 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,838 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,838 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,838 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,838 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,838 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,838 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,838 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,839 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,839 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,839 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,839 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,839 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:36:27,843 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-30 14:36:27,851 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:36:27,851 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:36:27,851 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:36:27,851 [1    ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:36:32,341 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-30 14:36:32,342 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-30 14:36:32,343 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-30 14:36:32,343 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-30 14:36:32,344 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-30 14:36:35,911 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-30 14:36:35,911 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-30 14:36:35,982 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-30 14:36:35,985 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-30 14:36:35,992 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-30 14:36:35,993 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-30 14:36:35,994 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-30 14:36:35,994 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-30 14:38:06,318 [26   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-30 14:38:09,565 [26   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-30 14:38:09,568 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,569 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,569 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,570 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,570 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,570 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,570 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,570 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,570 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,570 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,570 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,570 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,570 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:38:09,574 [26   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-30 14:38:09,593 [26   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:38:09,593 [26   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:38:09,593 [26   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:38:09,593 [26   ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:41:50,048 [26   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-30 14:41:50,052 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-30 14:41:50,052 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-30 14:41:50,053 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-30 14:41:50,053 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-30 14:41:51,811 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-30 14:41:51,811 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-30 14:41:51,853 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-30 14:41:51,856 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-30 14:41:51,874 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-30 14:41:51,874 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-30 14:41:51,875 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-30 14:41:51,876 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-30 14:42:59,343 [26   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-30 14:43:01,269 [26   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-30 14:43:01,272 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,273 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,274 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:43:01,278 [26   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-30 14:43:01,295 [26   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:43:01,295 [26   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:43:01,295 [26   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:43:01,295 [26   ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:43:03,374 [26   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-30 14:43:03,377 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-30 14:43:03,378 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-30 14:43:03,379 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-30 14:43:03,379 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-30 14:43:05,061 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-30 14:43:05,062 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-30 14:43:05,103 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-30 14:43:05,107 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-30 14:43:05,126 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-30 14:43:05,127 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-30 14:43:05,128 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-30 14:43:05,129 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-30 14:44:27,841 [26   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-30 14:44:29,915 [26   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-30 14:44:29,918 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,919 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,920 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:44:29,924 [26   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-30 14:44:29,941 [26   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:44:29,941 [26   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:44:29,941 [26   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:44:29,941 [26   ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:44:32,081 [26   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-30 14:44:32,084 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-30 14:44:32,084 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-30 14:44:32,085 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-30 14:44:32,085 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-30 14:44:33,767 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-30 14:44:33,768 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-30 14:44:33,811 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-30 14:44:33,814 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-30 14:44:33,834 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-30 14:44:33,835 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-30 14:44:33,836 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-30 14:44:33,836 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-30 14:48:30,132 [68   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-30 14:48:33,451 [68   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-30 14:48:33,455 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,456 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,456 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,456 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,457 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,457 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,457 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,457 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,458 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,458 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,458 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,458 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,458 [68   ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:48:33,462 [68   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-30 14:48:33,484 [68   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:48:33,484 [68   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:48:33,484 [68   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:48:33,484 [68   ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:49:32,790 [68   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-30 14:49:32,798 [68   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-30 14:49:32,798 [68   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-30 14:49:32,799 [68   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-30 14:49:32,800 [68   ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-30 14:49:40,311 [68   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-30 14:49:40,311 [68   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-30 14:49:40,356 [68   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-30 14:49:40,360 [68   ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-30 14:49:44,141 [68   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-30 14:49:44,142 [68   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-30 14:49:44,143 [68   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-30 14:49:44,144 [68   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-30 14:56:08,204 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-30 14:56:10,788 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-30 14:56:10,790 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,793 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,793 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 14:56:10,796 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-30 14:56:10,812 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:56:10,813 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:56:10,813 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:56:10,813 [1    ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 14:56:12,864 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-30 14:56:12,867 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-30 14:56:12,867 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-30 14:56:12,868 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-30 14:56:12,868 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-30 14:56:14,376 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-30 14:56:14,376 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-30 14:56:14,418 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-30 14:56:14,421 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-30 14:56:14,440 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-30 14:56:14,440 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-30 14:56:14,441 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-30 14:56:14,442 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-12-30 16:21:15,794 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-12-30 16:21:17,787 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2015-12-30 16:21:17,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.7.4.2, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.7.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSApplicationModule, CMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSCoreModule, CMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.CMSDataModule, CMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Web.CMSWebModule, CMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CMS.Api.CMSWebApiModule, CMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-12-30 16:21:17,795 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2015-12-30 16:21:17,813 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 16:21:17,813 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 16:21:17,813 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 16:21:17,813 [1    ] o.Configuration.LanguageManagementConfig - Converted CMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2015-12-30 16:21:20,319 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-12-30 16:21:20,324 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-12-30 16:21:20,324 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-12-30 16:21:20,325 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-12-30 16:21:20,325 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CMS
+DEBUG 2015-12-30 16:21:22,057 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-12-30 16:21:22,057 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-12-30 16:21:22,160 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-12-30 16:21:22,165 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2015-12-30 16:21:22,188 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.CMS.INodeAppService' with service name 'app/node'.
+DEBUG 2015-12-30 16:21:22,189 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2015-12-30 16:21:22,190 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2015-12-30 16:21:22,191 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CMS.Sessions.ISessionAppService' with service name 'app/session'.

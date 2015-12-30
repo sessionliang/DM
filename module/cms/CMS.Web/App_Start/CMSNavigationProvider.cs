@@ -33,7 +33,7 @@ namespace CMS.Web
                             new MenuItemDefinition(
                                 "Channels",
                                 new LocalizableString("Channels", CMSConsts.LocalizationSourceName),
-                                url: PageUtils.GetCMSAdminControllerUrl("/channel/channels"),
+                                url: PageUtils.GetCMSAdminControllerUrl("/channel/index"),
                                 icon: "fa fa-info")
                         )
                 ).AddItem(

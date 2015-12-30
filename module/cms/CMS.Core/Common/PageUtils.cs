@@ -28,7 +28,7 @@ namespace CMS.Common
             if (string.IsNullOrEmpty(relatedUrl))
                 relatedUrl = "home/index";
             relatedUrl = relatedUrl.Trim("/".ToCharArray());
-            return Path.Combine(CMSAdmin.ADMIN_CONTROLLER_URL, "/", relatedUrl).Replace("//", "/");
+            return Path.Combine(CMSAdmin.ADMIN_CONTROLLER_URL, relatedUrl).Replace("\\", "/");
         }
     }
 }

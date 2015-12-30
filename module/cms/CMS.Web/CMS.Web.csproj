@@ -795,9 +795,8 @@
       <DependentUpon>main.css</DependentUpon>
     </Content>
     <Content Include="App\Main\services\appSession.js" />
-    <Content Include="App\Main\views\channel\channels.js" />
+    <Content Include="App\Main\views\channel\index.js" />
     <Content Include="App\Main\views\content\content.js" />
-    <Content Include="App\Main\views\channel\channel.js" />
     <Content Include="App\Main\views\layout\navigate.js" />
     <Content Include="App\Main\views\layout\header.js" />
     <Content Include="App\Main\views\layout\layout.js" />
@@ -924,7 +923,6 @@
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="App\Main\views\channel\channel.cshtml" />
     <Content Include="App\Main\views\content\content.cshtml" />
     <Content Include="Abp\UI\css\plugins\footable\fonts\footable.eot" />
     <Content Include="Abp\UI\css\plugins\footable\fonts\footable.eot" />
@@ -962,7 +960,7 @@
     <Content Include="App\Main\views\layout\message.cshtml" />
     <Content Include="App\Main\views\template\template.cshtml" />
     <Content Include="App\Main\views\create\create.cshtml" />
-    <Content Include="App\Main\views\channel\channels.cshtml" />
+    <Content Include="App\Main\views\channel\index.cshtml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1753,7 +1751,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ChannelController.cs" />
+    <Compile Include="Controllers\DM\ChannelController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CMSControllerBase.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
@@ -1787,10 +1785,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Channel\" />
-    <Folder Include="Views\DM\Node\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\..\ABPFramework\Abp.AutoMapper\Abp.AutoMapper.csproj">
       <Project>{06eb5f7c-b974-4775-a305-f175d645f7c9}</Project>
