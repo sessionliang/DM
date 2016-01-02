@@ -35,7 +35,7 @@ namespace CMS.Core
             GetNodesOutput output = new GetNodesOutput();
             int limit = input.Limit.HasValue ? input.Limit.Value : CMSConsts.PageLimit;
             int offset = input.Offset.HasValue ? input.Offset.Value : 0;
-            var nodes = Mapper.Map<IList<NodeDto>>(_nodeRepository.GetNodesPagingByPublishmentSystemId(input.PublishmentSystemId, limit, offset));
+            var nodes = Mapper.DynamicMap<IList<NodeDto>>(_nodeRepository.GetNodesPagingByPublishmentSystemId(input.PublishmentSystemId, limit, offset));
             output.Nodes = nodes;
             return output;
         }
@@ -51,7 +51,7 @@ namespace CMS.Core
             //根据ID查询
             if (input.NodeId.HasValue)
             {
-                var node = Mapper.Map<NodeDto>(await _nodeRepository.FirstOrDefaultAsync(input.NodeId.Value));
+                var node = Mapper.DynamicMap<NodeDto>(await _nodeRepository.FirstOrDefaultAsync(input.NodeId.Value));
                 output.Nodes.Add(node);
                 output.Node = node;
             }
@@ -69,7 +69,7 @@ namespace CMS.Core
             //根据parentId查询
             if (input.ParentId.HasValue)
             {
-                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeRepository.FindByParentIdAsync(input.ParentId.Value));
+                var nodes = Mapper.DynamicMap<IList<NodeDto>>(await _nodeRepository.FindByParentIdAsync(input.ParentId.Value));
                 output.Nodes = nodes;
             }
             return output;
@@ -86,7 +86,7 @@ namespace CMS.Core
             //根据publishmentSystemId, nodeIndex查询
             if (!string.IsNullOrEmpty(input.NodeIndex))
             {
-                var node = Mapper.Map<NodeDto>(await _nodeRepository.FindByIndexAsync(input.PublishmentSystemId,
+                var node = Mapper.DynamicMap<NodeDto>(await _nodeRepository.FindByIndexAsync(input.PublishmentSystemId,
                     input.NodeIndex));
                 output.Nodes.Add(node);
                 output.Node = node;
@@ -105,7 +105,7 @@ namespace CMS.Core
             //根据publishmentSystemId, nodeName查询
             if (!string.IsNullOrEmpty(input.NodeName))
             {
-                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeRepository.FindByNameAsync(input.PublishmentSystemId,
+                var nodes = Mapper.DynamicMap<IList<NodeDto>>(await _nodeRepository.FindByNameAsync(input.PublishmentSystemId,
                     input.NodeName));
                 output.Nodes = nodes;
             }
@@ -157,7 +157,7 @@ namespace CMS.Core
                 result.CheckErrors();
             }
 
-            return Mapper.Map<CreateNodeOutput>(await _nodeRepository.InsertAsync(nodeInfo));
+            return Mapper.DynamicMap<CreateNodeOutput>(await _nodeRepository.InsertAsync(nodeInfo));
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace CMS.Core
             {
                 result.CheckErrors();
             }
-            return Mapper.Map<UpdateNodeOutput>(await _nodeRepository.UpdateAsync(node));
+            return Mapper.DynamicMap<UpdateNodeOutput>(await _nodeRepository.UpdateAsync(node));
         }
     }
 }

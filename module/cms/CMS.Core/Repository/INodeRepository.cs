@@ -11,13 +11,6 @@ namespace CMS.Repository
     public interface INodeRepository : IRepository<NodeInfo, long>
     {
         /// <summary>
-        /// 根据栏目Id获取栏目
-        /// </summary>
-        /// <param name="nodeId"></param>
-        /// <returns></returns>
-        //Task<NodeInfo> FindByIdAsync(long nodeId);
-
-        /// <summary>
         /// 根据栏目父级Id获取栏目
         /// </summary>
         /// <param name="parentId"></param>

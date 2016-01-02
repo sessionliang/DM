@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace CMS.EntityFramework.Repositories
 {
-    public abstract class NodeRepository : CMSRepositoryBase<NodeInfo, long>, INodeRepository
+    public class NodeRepository : CMSRepositoryBase<NodeInfo, long>, INodeRepository
     {
 
-        protected NodeRepository(IDbContextProvider<CMSDbContext> context)
+        public NodeRepository(IDbContextProvider<CMSDbContext> context)
             : base(context)
         {
 
@@ -84,6 +84,8 @@ node => node.PublishmentSystemId == publishmentSystemId && node.NodeIndexName ==
         {
             var query = base.GetAll();
             return query.Where(node => node.PublishmentSystemId == publishmentSystemId)
+                   .OrderBy(node => node.Id)
+                   .OrderBy(node => node.Taxis)
                    .Skip(offset)
                    .Take(limit)
                    .ToList();

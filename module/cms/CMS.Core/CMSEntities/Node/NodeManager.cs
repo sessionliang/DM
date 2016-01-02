@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace CMS.CMSEntities.Node
 {
-    public abstract class NodeManager : IDomainService
+    public class NodeManager : IDomainService
     {
         private readonly INodeRepository _nodeRepository;
 
         public ILocalizationManager LocalizationManager { get; set; }
 
-        protected NodeManager(INodeRepository nodeRepository)
+        public NodeManager(INodeRepository nodeRepository)
         {
             _nodeRepository = nodeRepository;
             LocalizationManager = NullLocalizationManager.Instance;

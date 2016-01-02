@@ -9,9 +9,10 @@ namespace CMS.Core.Dto
 {
     public class NodeDto : EntityDto<long>
     {
+        [AutoMapper.MapTo("Id")]
         public long NodeId { get; set; }
         public string NodeName { get; set; }
-        public string NodeIndex { get; set; }
+        public string NodeIndexName { get; set; }
         public long ParentId { get; set; }
         public override string ToString()
         {
@@ -22,7 +23,7 @@ namespace CMS.Core.Dto
     ""ParentId"":""{3}"",
 }}", NodeId
    , NodeName
-   , NodeIndex
+   , NodeIndexName
    , ParentId);
         }
     }
