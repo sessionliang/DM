@@ -9,17 +9,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CMS.Repository;
+using Abp.IdentityFramework;
 
 namespace CMS.Core
 {
     public class NodeAppService : CMSAppServiceBase, INodeAppService
     {
+        private readonly INodeRepository _nodeRepository;
         private readonly NodeManager _nodeManager;
 
-
-        public NodeAppService(NodeManager nodeManager)
+        public NodeAppService(NodeManager nodeManager, INodeRepository nodeRepository)
         {
             _nodeManager = nodeManager;
+            _nodeRepository = nodeRepository;
         }
 
         /// <summary>
@@ -32,7 +35,7 @@ namespace CMS.Core
             GetNodesOutput output = new GetNodesOutput();
             int limit = input.Limit.HasValue ? input.Limit.Value : CMSConsts.PageLimit;
             int offset = input.Offset.HasValue ? input.Offset.Value : 0;
-            var nodes = Mapper.Map<IList<NodeDto>>(_nodeManager.GetNodesPaging(input.PublishmentSystemId, limit, offset));
+            var nodes = Mapper.Map<IList<NodeDto>>(_nodeRepository.GetNodesPagingByPublishmentSystemId(input.PublishmentSystemId, limit, offset));
             output.Nodes = nodes;
             return output;
         }
@@ -48,7 +51,7 @@ namespace CMS.Core
             //根据ID查询
             if (input.NodeId.HasValue)
             {
-                var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIdAsync(input.NodeId.Value));
+                var node = Mapper.Map<NodeDto>(await _nodeRepository.FirstOrDefaultAsync(input.NodeId.Value));
                 output.Nodes.Add(node);
                 output.Node = node;
             }
@@ -66,7 +69,7 @@ namespace CMS.Core
             //根据parentId查询
             if (input.ParentId.HasValue)
             {
-                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodeByParentIdAsync(input.ParentId.Value));
+                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeRepository.FindByParentIdAsync(input.ParentId.Value));
                 output.Nodes = nodes;
             }
             return output;
@@ -83,7 +86,7 @@ namespace CMS.Core
             //根据publishmentSystemId, nodeIndex查询
             if (!string.IsNullOrEmpty(input.NodeIndex))
             {
-                var node = Mapper.Map<NodeDto>(await _nodeManager.GetNodeByNodeIndexAsync(input.PublishmentSystemId,
+                var node = Mapper.Map<NodeDto>(await _nodeRepository.FindByIndexAsync(input.PublishmentSystemId,
                     input.NodeIndex));
                 output.Nodes.Add(node);
                 output.Node = node;
@@ -102,7 +105,7 @@ namespace CMS.Core
             //根据publishmentSystemId, nodeName查询
             if (!string.IsNullOrEmpty(input.NodeName))
             {
-                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeManager.GetNodesByNodeNameAsync(input.PublishmentSystemId,
+                var nodes = Mapper.Map<IList<NodeDto>>(await _nodeRepository.FindByNameAsync(input.PublishmentSystemId,
                     input.NodeName));
                 output.Nodes = nodes;
             }
@@ -146,7 +149,15 @@ namespace CMS.Core
             {
                 nodeInfo.ParentId = input.PublishmentSystemId;
             }
-            return Mapper.Map<CreateNodeOutput>(await _nodeManager.InsertAsync(nodeInfo));
+
+            //检测重复
+            var result = await _nodeManager.CheckDuplicateNodeIndex(nodeInfo.Id, nodeInfo.PublishmentSystemId, nodeInfo.NodeIndexName);
+            if (!result.Succeeded)
+            {
+                result.CheckErrors();
+            }
+
+            return Mapper.Map<CreateNodeOutput>(await _nodeRepository.InsertAsync(nodeInfo));
         }
 
         /// <summary>
@@ -156,7 +167,7 @@ namespace CMS.Core
         /// <returns></returns>
         public async Task<UpdateNodeOutput> UpdateNode(UpdateNodeInput input)
         {
-            var node = await _nodeManager.GetNodeByNodeIdAsync(input.NodeId);
+            var node = await _nodeRepository.FirstOrDefaultAsync(input.NodeId);
 
             if (!string.IsNullOrEmpty(input.NodeName))
             {
@@ -179,7 +190,13 @@ namespace CMS.Core
                 node.ContentModelId = input.ContentModelId;
             }
 
-            return Mapper.Map<UpdateNodeOutput>(await _nodeManager.UpdateAsync(node));
+            //检测重复
+            var result = await _nodeManager.CheckDuplicateNodeIndex(node.Id, node.PublishmentSystemId, node.NodeIndexName);
+            if (!result.Succeeded)
+            {
+                result.CheckErrors();
+            }
+            return Mapper.Map<UpdateNodeOutput>(await _nodeRepository.UpdateAsync(node));
         }
     }
 }

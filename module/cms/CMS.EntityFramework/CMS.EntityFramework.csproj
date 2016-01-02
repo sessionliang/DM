@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="EntityFramework\CMSDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\CMSRepositoryBase.cs" />
+    <Compile Include="EntityFramework\Repositories\NodeRepository.cs" />
     <Compile Include="Migrations\201512011354360_CMS_Initial.cs" />
     <Compile Include="Migrations\201512011354360_CMS_Initial.Designer.cs">
       <DependentUpon>201512011354360_CMS_Initial.cs</DependentUpon>

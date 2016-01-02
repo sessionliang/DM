@@ -78,7 +78,6 @@
     <Compile Include="CMSEntities\Model\ContentInfo.cs" />
     <Compile Include="CMSEntities\Node\NodeInfo.cs" />
     <Compile Include="CMSEntities\Node\NodeManager.cs" />
-    <Compile Include="CMSEntities\Node\NodeStore.cs" />
     <Compile Include="Common\PageUtils.cs" />
     <Compile Include="Common\TranslateUtils.cs" />
     <Compile Include="Editions\EditionManager.cs" />
@@ -89,6 +88,7 @@
     <Compile Include="Authorization\Roles\Role.cs" />
     <Compile Include="Authorization\Roles\RoleManager.cs" />
     <Compile Include="Authorization\Roles\RoleStore.cs" />
+    <Compile Include="Repository\INodeRepository.cs" />
     <Compile Include="Users\User.cs" />
     <Compile Include="Users\UserManager.cs" />
     <Compile Include="Users\UserStore.cs" />
