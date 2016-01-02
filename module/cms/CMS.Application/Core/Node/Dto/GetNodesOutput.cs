@@ -15,6 +15,11 @@ namespace CMS.Core.Dto
         public IList<NodeDto> Nodes { get; set; }
 
         /// <summary>
+        /// 数据总数
+        /// </summary>
+        public int TotalCount { get; set; }
+
+        /// <summary>
         /// 查询个体的时候
         /// </summary>
         public NodeDto Node { get; set; }

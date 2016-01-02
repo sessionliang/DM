@@ -37,6 +37,7 @@ namespace CMS.Core
             int offset = input.Offset.HasValue ? input.Offset.Value : 0;
             var nodes = Mapper.DynamicMap<IList<NodeDto>>(_nodeRepository.GetNodesPagingByPublishmentSystemId(input.PublishmentSystemId, limit, offset));
             output.Nodes = nodes;
+            output.TotalCount = _nodeRepository.Count(node => node.PublishmentSystemId == input.PublishmentSystemId);
             return output;
         }
 
