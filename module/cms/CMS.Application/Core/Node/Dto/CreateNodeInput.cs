@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMS.CMS.Dto
+namespace CMS.Core.Dto
 {
-    public class UpdateNodeInput : CMSInputDtoBase
+    public class CreateNodeInput : CMSInputDtoBase
     {
-        public long NodeId { get; set; }
         public string NodeIndex { get; set; }
         public string NodeName { get; set; }
         public long? ParentId { get; set; }

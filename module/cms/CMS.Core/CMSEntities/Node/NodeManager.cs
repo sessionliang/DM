@@ -1,4 +1,5 @@
-﻿using Abp.IdentityFramework;
+﻿using Abp.Domain.Services;
+using Abp.IdentityFramework;
 using Abp.Localization;
 using Microsoft.AspNet.Identity;
 using System;
@@ -9,15 +10,16 @@ using System.Threading.Tasks;
 
 namespace CMS.CMSEntities.Node
 {
-    public class NodeManager
+    public abstract class NodeManager : IDomainService
     {
-        protected NodeStore<NodeInfo> AbpStore { get; private set; }
+        private readonly NodeStore<NodeInfo> _abpStore;
 
         public ILocalizationManager LocalizationManager { get; set; }
 
-        public NodeManager(NodeStore<NodeInfo> store)
+        protected NodeManager(NodeStore<NodeInfo> store)
         {
-            AbpStore = store;
+            _abpStore = store;
+            LocalizationManager = NullLocalizationManager.Instance;
         }
 
         /// <summary>
@@ -27,7 +29,7 @@ namespace CMS.CMSEntities.Node
         /// <returns></returns>
         public async Task<NodeInfo> GetNodeByNodeIdAsync(long nodeId)
         {
-            var node = await AbpStore.FindByIdAsync(nodeId);
+            var node = await _abpStore.FindByIdAsync(nodeId);
             if (node == null)
             {
                 throw new Exception("There is no node for id:" + nodeId);
@@ -42,7 +44,7 @@ namespace CMS.CMSEntities.Node
         /// <returns></returns>
         public async Task<IList<NodeInfo>> GetNodeByParentIdAsync(long parentId)
         {
-            var node = await AbpStore.FindByParentIdAsync(parentId);
+            var node = await _abpStore.FindByParentIdAsync(parentId);
 
             if (node == null)
             {
@@ -58,7 +60,7 @@ namespace CMS.CMSEntities.Node
         /// <returns></returns>
         public async Task<IList<NodeInfo>> GetNodesByNodeNameAsync(long publishmentSystemId, string nodeName)
         {
-            var node = await AbpStore.FindByNameAsync(publishmentSystemId, nodeName);
+            var node = await _abpStore.FindByNameAsync(publishmentSystemId, nodeName);
 
             if (node == null)
             {
@@ -74,7 +76,7 @@ namespace CMS.CMSEntities.Node
         /// <returns></returns>
         public async Task<NodeInfo> GetNodeByNodeIndexAsync(long publishmentSystemId, string nodeIndex)
         {
-            var node = await AbpStore.FindByIndexAsync(publishmentSystemId, nodeIndex);
+            var node = await _abpStore.FindByIndexAsync(publishmentSystemId, nodeIndex);
 
             if (node == null)
             {
@@ -96,7 +98,7 @@ namespace CMS.CMSEntities.Node
                 result.CheckErrors();
             }
 
-            return await AbpStore.CreateAsync(nodeInfo);
+            return await _abpStore.CreateAsync(nodeInfo);
         }
 
         /// <summary>
@@ -112,7 +114,7 @@ namespace CMS.CMSEntities.Node
                 result.CheckErrors();
             }
 
-            return await AbpStore.UpdateAsync(nodeInfo);
+            return await _abpStore.UpdateAsync(nodeInfo);
         }
 
         /// <summary>
@@ -123,13 +125,32 @@ namespace CMS.CMSEntities.Node
         /// <returns></returns>
         public virtual async Task<IdentityResult> CheckDuplicateNodeIndex(long? expectedNodeId, long publishmentSystemId, string nodeIndexName)
         {
-            var node = (await AbpStore.FindByIndexAsync(publishmentSystemId, nodeIndexName));
+            var node = (await _abpStore.FindByIndexAsync(publishmentSystemId, nodeIndexName));
             if (node != null && node.Id != expectedNodeId)
             {
                 return AbpIdentityResult.Failed(string.Format(L("Identity.DuplicateIndexName"), nodeIndexName));
             }
             return IdentityResult.Success;
         }
+
+        /// <summary>
+        /// 分页获取node集合
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="nullable1"></param>
+        /// <param name="nullable2"></param>
+        /// <returns></returns>
+        public IList<NodeInfo> GetNodesPaging(long publishmentSystemId, int limit, int offset)
+        {
+            var nodes = _abpStore.FindByPublishmentSystemIdAsync(publishmentSystemId, limit, offset);
+
+            if (nodes == null)
+            {
+                throw new Exception("There is no nodes for parentId:" + publishmentSystemId);
+            }
+            return nodes;
+        }
+
 
         /// <summary>
         /// 获取本地化信息
@@ -140,5 +161,6 @@ namespace CMS.CMSEntities.Node
         {
             return LocalizationManager.GetString(CMSConsts.LocalizationSourceName, name);
         }
+
     }
 }

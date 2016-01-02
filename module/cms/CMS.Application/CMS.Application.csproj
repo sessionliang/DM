@@ -77,18 +77,18 @@
   <ItemGroup>
     <Compile Include="CMSApplicationModule.cs" />
     <Compile Include="CMSAppServiceBase.cs" />
-    <Compile Include="CMS\CMSDtoBase.cs" />
-    <Compile Include="CMS\Node\Dto\CreateNodeInput.cs">
+    <Compile Include="Core\CMSDtoBase.cs" />
+    <Compile Include="Core\Node\Dto\CreateNodeInput.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CMS\Node\Dto\UpdateNodeInput.cs" />
-    <Compile Include="CMS\Node\Dto\UpdateNodeOutput.cs" />
-    <Compile Include="CMS\Node\Dto\GetNodesInput.cs" />
-    <Compile Include="CMS\Node\Dto\CreateNodeOutput.cs" />
-    <Compile Include="CMS\Node\Dto\GetNodesOutput.cs" />
-    <Compile Include="CMS\Node\Dto\NodeDto.cs" />
-    <Compile Include="CMS\Node\INodeAppService.cs" />
-    <Compile Include="CMS\Node\NodeAppService.cs" />
+    <Compile Include="Core\Node\Dto\UpdateNodeInput.cs" />
+    <Compile Include="Core\Node\Dto\UpdateNodeOutput.cs" />
+    <Compile Include="Core\Node\Dto\GetNodesInput.cs" />
+    <Compile Include="Core\Node\Dto\CreateNodeOutput.cs" />
+    <Compile Include="Core\Node\Dto\GetNodesOutput.cs" />
+    <Compile Include="Core\Node\Dto\NodeDto.cs" />
+    <Compile Include="Core\Node\INodeAppService.cs" />
+    <Compile Include="Core\Node\NodeAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles\IRoleAppService.cs" />
     <Compile Include="Roles\Dto\UpdateRolePermissionsInput.cs" />

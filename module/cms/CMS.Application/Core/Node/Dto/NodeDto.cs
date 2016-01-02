@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMS.CMS.Dto
+namespace CMS.Core.Dto
 {
     public class NodeDto : EntityDto<long>
     {

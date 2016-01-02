@@ -1,4 +1,5 @@
-﻿using Abp.Domain.Entities;
+﻿using Abp.Dependency;
+using Abp.Domain.Entities;
 using Abp.Domain.Repositories;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CMS.CMSEntities.Node
 {
-    public class NodeStore<TNodeInfo>
+    public abstract class NodeStore<TNodeInfo> : ITransientDependency
         where TNodeInfo : NodeInfo
     {
         /// <summary>
@@ -20,7 +21,7 @@ namespace CMS.CMSEntities.Node
         /// 构造器
         /// </summary>
         /// <param name="cmsNodeRepository"></param>
-        public NodeStore(IRepository<TNodeInfo, long> cmsNodeRepository)
+        protected NodeStore(IRepository<TNodeInfo, long> cmsNodeRepository)
         {
             _cmsNodeRepository = cmsNodeRepository;
         }
@@ -146,6 +147,25 @@ namespace CMS.CMSEntities.Node
             {
                 return (await _cmsNodeRepository.GetAllListAsync(node => node.PublishmentSystemId == publishmentSystemId)).ToList();
             }
+        }
+
+        /// <summary>
+        /// 分页获取node集合
+        /// </summary>
+        /// <param name="publishmentSystemId"></param>
+        /// <param name="limit"></param>
+        /// <param name="offset"></param>
+        /// <returns></returns>
+        public IList<TNodeInfo> FindByPublishmentSystemIdAsync(long publishmentSystemId, int limit, int offset)
+        {
+            //test1
+            var query = _cmsNodeRepository.GetAll();
+            return query.Where(node => node.PublishmentSystemId == publishmentSystemId)
+                   .Skip(offset)
+                   .Take(limit)
+                   .ToList();
+            //test2
+            //return _cmsNodeRepository.GetAllList(node => node.PublishmentSystemId == publishmentSystemId).Skip(offset).Take(limit).ToList();
         }
     }
 }
