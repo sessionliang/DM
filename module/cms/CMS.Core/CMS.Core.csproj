@@ -83,7 +83,7 @@
     <Compile Include="Editions\EditionManager.cs" />
     <Compile Include="Features\FeatureValueStore.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />
-    <Compile Include="MultiTenancy\TenantManager.cs" />
+    <Compile Include="Common\Localization\Source\TenantManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Authorization\Roles\Role.cs" />
     <Compile Include="Authorization\Roles\RoleManager.cs" />
@@ -98,9 +98,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Localization\Source\CMS-zh-CN.xml" />
-    <EmbeddedResource Include="Localization\Source\CMS-tr.xml" />
-    <EmbeddedResource Include="Localization\Source\CMS.xml" />
+    <EmbeddedResource Include="Common\Localization\Source\CMS-zh-CN.xml" />
+    <EmbeddedResource Include="Common\Localization\Source\CMS-tr.xml" />
+    <EmbeddedResource Include="Common\Localization\Source\CMS.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\ABPFramework\Abp\Abp.csproj">

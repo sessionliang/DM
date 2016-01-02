@@ -14,6 +14,7 @@ namespace CMS.Core.Dto
         public string NodeName { get; set; }
         public string NodeIndexName { get; set; }
         public long ParentId { get; set; }
+        public long PublishmentSystemId { get; set; }
         public override string ToString()
         {
             return string.Format(@"{{
@@ -21,10 +22,12 @@ namespace CMS.Core.Dto
     ""NodeName"":""{1}"",
     ""NodeIndex"":""{2}"",
     ""ParentId"":""{3}"",
+    ""PublishmentSystemId"":""{4}""
 }}", NodeId
    , NodeName
    , NodeIndexName
-   , ParentId);
+   , ParentId
+   , PublishmentSystemId);
         }
     }
 }
