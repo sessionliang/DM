@@ -1,7 +1,7 @@
-﻿(function (o) {
+﻿(function () {
     var controllerId = 'app.views.channels.index';
     angular.module('app').controller(controllerId, [
-        'abp.services.app.node', '$scope', function (nodeService, $scope) {
+        'abp.services.app.node', '$scope', '$modal', function (nodeService, $scope, $modal) {
             var vm = this;
 
             vm.nodes = [];
@@ -22,49 +22,52 @@
                 };
             }
 
-            vm.loadNodes = function () {
-                abp.ui.setBusy(
-                    $("#contentTable"),
-                    $("#contentTable").bootstrapTable({
-                        url: "/api/services/app/node/getNodes",
-                        sidePagination: "server",
-                        method: "post",
-                        queryParams: function (params) {
-                            params["publishmentSystemId"] = 1;
-                            return params;
-                        },
-                        queryParamsType: "limit",
-                        pageSize: 3,
-                        pageNumber: 1,
-                        pagination: true,
-                        showPaginationSwitch: true,
-                        clickToSelect: true,
-                        sortName: vm.sorting,
-                        idField: "id",
-                        search: !0,
-                        showRefresh: !0,
-                        showToggle: !0,
-                        showColumns: !0,
-                        toolbar: "#contentTableToolbar",
-                        iconSize: "outline",
-                        icons: {
-                            refresh: "glyphicon-repeat",
-                            toggle: "glyphicon-list-alt",
-                            columns: "glyphicon-list"
-                        },
-                        responseHandler: vm.responseHandler
-                    })
-                );
-            }
-
-            vm.loadNodes();
-
             vm.addNode = function () {
-                abp.notify.info("添加node");
+                var modalInstance = $modal.open({
+                    templateUrl: abp.appPath + 'App/Main/views/channel/createNode.cshtml',
+                    controller: 'app.views.channels.createNode as vm',
+                    size: "md"
+                });
+                modalInstance.result.then(function () {
+                    vm.loadNodes();
+                });
             };
+
             vm.deleteNode = function () {
                 abp.notify.success("删除node");
             };
+
+            vm.loadNodes = function () {
+                abp.ui.setBusy("#contentTable");
+                $("#contentTable").bootstrapTable({
+                    url: "/api/services/app/node/getNodes",
+                    sidePagination: "server",
+                    method: "post",
+                    queryParams: function (params) {
+                        params["publishmentSystemId"] = 1;
+                        return params;
+                    },
+                    queryParamsType: "limit",
+                    pageSize: 3,
+                    pageNumber: 1,
+                    pagination: true,
+                    clickToSelect: true,
+                    sortName: vm.sorting,
+                    idField: "id",
+                    search: !0,
+                    showRefresh: !0,
+                    showToggle: !0,
+                    showColumns: !0,
+                    toolbar: "#contentTableToolbar",
+                    iconSize: "outline",
+                    icons: {
+                        refresh: "glyphicon-repeat",
+                        toggle: "glyphicon-list-alt",
+                        columns: "glyphicon-list"
+                    },
+                    responseHandler: vm.responseHandler
+                });
+            }
         }
     ]);
-})(jQuery);
+})();

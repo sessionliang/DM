@@ -1,0 +1,30 @@
+﻿<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Create new node!</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+                    <label for="NodeNameInput" class="col-lg-2 control-label">NodeName:</label>
+                    <div class="col-lg-10">
+                        <input ng-model="vm.node.nodeName" type="text" class="form-control" name="NodeNameInput" placeholder="Enter title here">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="NodeIndexNameInput" class="col-lg-2 control-label">NodeIndexName:</label>
+                    <div class="col-lg-10">
+                        <textarea ng-model="vm.node.nodeIndexName" class="form-control" rows="5" name="NodeIndexNameInput" placeholder="Describe your node here"></textarea>
+                        <span class="help-block">Please search your node before creating new one. You can add code snippets and images to describe your problem cleaner.</span>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="vm.cancel()">Cancel</button>
+        <button class="btn btn-primary" ng-click="vm.save()">Submit node</button>
+    </div>
+</div>
+<script src="~/App/Main/views/channel/createNode.js"></script>
+

@@ -1,60 +1,65 @@
 ﻿@using System.Threading
 @using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+    </script>
 
-<script type="text/javascript">
-    //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
-    var abp = abp || {}; abp.appPath = '@ApplicationPath';
-</script>
 
-
-@Styles.Render("~/Bundles/App/vendor/css")
-@Styles.Render("~/Bundles/App/Main/css")
-<link href="~/Abp/UI/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
-<link href="~/Abp/UI/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
-<link href="~/Abp/UI/css/animate.min.css" rel="stylesheet">
-<link href="~/Abp/UI/css/style.min.css?v=4.0.0" rel="stylesheet">
-<link href="~/Abp/UI/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
-
-<div ng-app="app">
-    <div class="wrapper wrapper-content animated fadeInRight" ng-controller="app.views.channels.index as vm">
-        <div class="ibox float-e-margins">
-            <div class="ibox-content">
-                <div class="row row-lg">
-                    <div class="col-sm-12">
-                        <!-- Example Events -->
-                        <div class="example-wrap">
-                            <h4 class="example-title">栏目管理</h4>
-                            <div class="example">
-                                <div class="btn-group hidden-xs" id="contentTableToolbar" role="group">
-                                    <button ng-click="vm.addNode()" type="button" class="btn btn-outline btn-default">
-                                        <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-outline btn-default">
-                                        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
-                                    </button>
-                                    <button ng-click="vm.deleteNode()" type="button" class="btn btn-outline btn-default">
-                                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
-                                    </button>
+    @Styles.Render("~/Bundles/App/vendor/css")
+    @Styles.Render("~/Bundles/App/Main/css")
+    <link href="~/Abp/UI/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="~/Abp/UI/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="~/Abp/UI/css/animate.min.css" rel="stylesheet">
+    <link href="~/Abp/UI/css/style.min.css?v=4.0.0" rel="stylesheet">
+    <link href="~/Abp/UI/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+</head>
+<body style="padding-top:10px;">
+    <div ng-app="app">
+        <div class="wrapper wrapper-content animated fadeInRight" ng-controller="app.views.channels.index as vm">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="row row-lg">
+                        <div class="col-sm-12">
+                            <!-- Example Events -->
+                            <div class="example-wrap">
+                                <h4 class="example-title">栏目管理</h4>
+                                <div class="example">
+                                    <div class="btn-group hidden-xs" id="contentTableToolbar" role="group">
+                                        <button ng-click="vm.addNode()" type="button" class="btn btn-outline btn-default">
+                                            <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline btn-default">
+                                            <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+                                        </button>
+                                        <button ng-click="vm.deleteNode()" type="button" class="btn btn-outline btn-default">
+                                            <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <table id="contentTable" data-height="400" data-mobile-responsive="true" data-ng-init="vm.loadNodes()">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="state" data-checkbox="true"></th>
+                                                <th data-field="nodeName">名称</th>
+                                                <th data-field="nodeIndexName">索引</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
                                 </div>
-                                <table id="contentTable" data-height="400" data-mobile-responsive="true">
-                                    <thead>
-                                        <tr>
-                                            <th data-field="state" data-checkbox="true"></th>
-                                            <th data-field="nodeName">名称</th>
-                                            <th data-field="nodeIndexName">索引</th>
-                                        </tr>
-                                    </thead>
-                                </table>
                             </div>
+                            <!-- End Example Events -->
                         </div>
-                        <!-- End Example Events -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
+</body>
+</html>
 @Scripts.Render("~/Bundles/App/vendor/js")
 <script src="~/Abp/UI/js/bootstrap.min.js?v=3.3.5"></script>
 <script src="~/Abp/UI/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
