@@ -1,19 +1,19 @@
 ﻿using Abp.Application.Services;
-using CMS.CMS.Dto;
+using CMS.Core.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMS.CMS
+namespace CMS.Core
 {
     /// <summary>
     /// 栏目appservice
     /// </summary>
     public interface INodeAppService : IApplicationService
     {
-        Task<GetNodesOutput> GetNodes(GetNodesInput input);
+        GetNodesOutput GetNodes(GetNodesInput input);
         Task<GetNodesOutput> GetNodeById(GetNodesInput input);
         Task<GetNodesOutput> GetNodesByParentId(GetNodesInput input);
         Task<GetNodesOutput> GetNodeByNodeIndex(GetNodesInput input);

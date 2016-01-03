@@ -15,7 +15,7 @@ using CMS.Users;
 using Castle.MicroKernel.Registration;
 using EntityFramework.DynamicFilters;
 
-namespace CMS.Tests.Sessions
+namespace CMS.Tests
 {
     public abstract class CMSTestBase : AbpIntegratedTestBase
     {

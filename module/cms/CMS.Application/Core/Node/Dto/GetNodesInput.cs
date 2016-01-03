@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMS.CMS.Dto
+namespace CMS.Core.Dto
 {
     public class GetNodesInput : CMSInputDtoBase
     {
@@ -13,5 +13,14 @@ namespace CMS.CMS.Dto
         public string NodeIndex { get; set; }
         public string NodeName { get; set; }
         public long? ParentId { get; set; }
+
+        /// <summary>
+        /// 页大小
+        /// </summary>
+        public int? Limit { get; set; }
+        /// <summary>
+        /// 页偏移量
+        /// </summary>
+        public int? Offset { get; set; }
     }
 }

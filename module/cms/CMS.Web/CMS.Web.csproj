@@ -929,6 +929,7 @@
     <Content Include="Abp\UI\css\plugins\footable\fonts\footable.ttf" />
     <Content Include="Abp\UI\css\plugins\footable\fonts\footable.woff" />
     <Content Include="Abp\UI\css\plugins\jqgrid\ui.jqgrid.css0820" />
+    <Content Include="Web.config" />
     <None Include="Abp\UI\fonts\fontawesome-webfont.eot" />
     <Content Include="Abp\UI\fonts\fontawesome-webfont.ttf" />
     <Content Include="Abp\UI\fonts\fontawesome-webfont.woff" />
@@ -1741,8 +1742,13 @@
     <Content Include="Views\Account\Login.min.css">
       <DependentUpon>Login.css</DependentUpon>
     </Content>
-    <Content Include="Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -1778,12 +1784,6 @@
     <Content Include="Views\Account\RegisterResult.cshtml" />
     <Content Include="Views\Account\TenantSelection.cshtml" />
     <Content Include="Scripts\version.json" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

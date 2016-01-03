@@ -1,5 +1,8 @@
-﻿using Abp.IdentityFramework;
+﻿using Abp.Domain.Repositories;
+using Abp.Domain.Services;
+using Abp.IdentityFramework;
 using Abp.Localization;
+using CMS.Repository;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -9,110 +12,16 @@ using System.Threading.Tasks;
 
 namespace CMS.CMSEntities.Node
 {
-    public class NodeManager
+    public class NodeManager : IDomainService
     {
-        protected NodeStore<NodeInfo> AbpStore { get; private set; }
+        private readonly INodeRepository _nodeRepository;
 
         public ILocalizationManager LocalizationManager { get; set; }
 
-        public NodeManager(NodeStore<NodeInfo> store)
+        public NodeManager(INodeRepository nodeRepository)
         {
-            AbpStore = store;
-        }
-
-        /// <summary>
-        /// 根据nodeId获取node
-        /// </summary>
-        /// <param name="nodeId"></param>
-        /// <returns></returns>
-        public async Task<NodeInfo> GetNodeByNodeIdAsync(long nodeId)
-        {
-            var node = await AbpStore.FindByIdAsync(nodeId);
-            if (node == null)
-            {
-                throw new Exception("There is no node for id:" + nodeId);
-            }
-            return node;
-        }
-
-        /// <summary>
-        /// 根据parentId获取node
-        /// </summary>
-        /// <param name="nodeId"></param>
-        /// <returns></returns>
-        public async Task<IList<NodeInfo>> GetNodeByParentIdAsync(long parentId)
-        {
-            var node = await AbpStore.FindByParentIdAsync(parentId);
-
-            if (node == null)
-            {
-                throw new Exception("There is no nodes for parentId:" + parentId);
-            }
-            return node;
-        }
-
-        /// <summary>
-        /// 根据nodeName获取nodes
-        /// </summary>
-        /// <param name="nodeId"></param>
-        /// <returns></returns>
-        public async Task<IList<NodeInfo>> GetNodesByNodeNameAsync(long publishmentSystemId, string nodeName)
-        {
-            var node = await AbpStore.FindByNameAsync(publishmentSystemId, nodeName);
-
-            if (node == null)
-            {
-                throw new Exception("There is no node for publishmentSystemId:" + publishmentSystemId + ", nodeName:" + nodeName);
-            }
-            return node;
-        }
-
-        /// <summary>
-        /// 根据nodeName获取nodes
-        /// </summary>
-        /// <param name="nodeId"></param>
-        /// <returns></returns>
-        public async Task<NodeInfo> GetNodeByNodeIndexAsync(long publishmentSystemId, string nodeIndex)
-        {
-            var node = await AbpStore.FindByIndexAsync(publishmentSystemId, nodeIndex);
-
-            if (node == null)
-            {
-                throw new Exception("There is no node for publishmentSystemId:" + publishmentSystemId + ", nodeIndex:" + nodeIndex);
-            }
-            return node;
-        }
-
-        /// <summary>
-        /// 创建栏目
-        /// </summary>
-        /// <param name="nodeInfo"></param>
-        /// <returns></returns>
-        public async Task<NodeInfo> InsertAsync(NodeInfo nodeInfo)
-        {
-            var result = await CheckDuplicateNodeIndex(nodeInfo.Id, nodeInfo.PublishmentSystemId, nodeInfo.NodeIndexName);
-            if (!result.Succeeded)
-            {
-                result.CheckErrors();
-            }
-
-            return await AbpStore.CreateAsync(nodeInfo);
-        }
-
-        /// <summary>
-        /// 更新栏目
-        /// </summary>
-        /// <param name="nodeInfo"></param>
-        /// <returns></returns>
-        public async Task<NodeInfo> UpdateAsync(NodeInfo nodeInfo)
-        {
-            var result = await CheckDuplicateNodeIndex(nodeInfo.Id, nodeInfo.PublishmentSystemId, nodeInfo.NodeIndexName);
-            if (!result.Succeeded)
-            {
-                result.CheckErrors();
-            }
-
-            return await AbpStore.UpdateAsync(nodeInfo);
+            _nodeRepository = nodeRepository;
+            LocalizationManager = NullLocalizationManager.Instance;
         }
 
         /// <summary>
@@ -123,7 +32,7 @@ namespace CMS.CMSEntities.Node
         /// <returns></returns>
         public virtual async Task<IdentityResult> CheckDuplicateNodeIndex(long? expectedNodeId, long publishmentSystemId, string nodeIndexName)
         {
-            var node = (await AbpStore.FindByIndexAsync(publishmentSystemId, nodeIndexName));
+            var node = (await _nodeRepository.FindByIndexAsync(publishmentSystemId, nodeIndexName));
             if (node != null && node.Id != expectedNodeId)
             {
                 return AbpIdentityResult.Failed(string.Format(L("Identity.DuplicateIndexName"), nodeIndexName));
@@ -140,5 +49,6 @@ namespace CMS.CMSEntities.Node
         {
             return LocalizationManager.GetString(CMSConsts.LocalizationSourceName, name);
         }
+
     }
 }
