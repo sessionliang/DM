@@ -1,5 +1,5 @@
 ﻿(function () {
-    var controllerId = 'app.views.channels.createNode';
+    var controllerId = 'app.views.channel.createNode';
     angular.module('app').controller(controllerId, [
         'app.services.app.node', '$modalInstance',
         function (nodeService, $modalInstance) {

@@ -1,7 +1,7 @@
 ﻿(function () {
-    var controllerId = 'app.views.channels.index';
+    var controllerId = 'app.views.channel.index';
     angular.module('app').controller(controllerId, [
-        'abp.services.app.node', '$scope', '$modal', function (nodeService, $scope, $modal) {
+        'abp.services.app.node', '$scope', '$uibModal', function (nodeService, $scope, $uibModal) {
             var vm = this;
 
             vm.nodes = [];
@@ -23,9 +23,9 @@
             }
 
             vm.addNode = function () {
-                var modalInstance = $modal.open({
-                    templateUrl: abp.appPath + 'App/Main/views/channel/createNode.cshtml',
-                    controller: 'app.views.channels.createNode as vm',
+                var modalInstance = $uibModal.open({
+                    templateUrl: abp.appPath + 'dm/channel/createNode',
+                    controllerAs: 'app.views.channel.createNode as vm',
                     size: "md"
                 });
                 modalInstance.result.then(function () {
