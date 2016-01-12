@@ -191,6 +191,7 @@
   <ItemGroup>
     <Content Include="Abp\Framework\scripts\abp.js" />
     <Content Include="Abp\Framework\scripts\libs\abp.blockUI.js" />
+    <Content Include="Abp\Framework\scripts\libs\abp.bootable.js" />
     <Content Include="Abp\Framework\scripts\libs\abp.jquery.js" />
     <Content Include="Abp\Framework\scripts\libs\abp.jtable.js" />
     <Content Include="Abp\Framework\scripts\libs\abp.spin.js" />
