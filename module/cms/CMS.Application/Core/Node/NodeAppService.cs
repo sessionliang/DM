@@ -36,7 +36,7 @@ namespace CMS.Core
             int limit = input.Limit.HasValue ? input.Limit.Value : CMSConsts.PageLimit;
             int offset = input.Offset.HasValue ? input.Offset.Value : 0;
             var nodes = Mapper.DynamicMap<IList<NodeDto>>(_nodeRepository.GetNodesPagingByPublishmentSystemId(input.PublishmentSystemId, limit, offset));
-            output.Nodes = nodes;
+            output.Items = nodes;
             output.TotalCount = _nodeRepository.Count(node => node.PublishmentSystemId == input.PublishmentSystemId);
             return output;
         }
@@ -53,7 +53,7 @@ namespace CMS.Core
             if (input.NodeId.HasValue)
             {
                 var node = Mapper.DynamicMap<NodeDto>(await _nodeRepository.FirstOrDefaultAsync(input.NodeId.Value));
-                output.Nodes.Add(node);
+                output.Items.Add(node);
                 output.Node = node;
             }
             return output;
@@ -71,7 +71,7 @@ namespace CMS.Core
             if (input.ParentId.HasValue)
             {
                 var nodes = Mapper.DynamicMap<IList<NodeDto>>(await _nodeRepository.FindByParentIdAsync(input.ParentId.Value));
-                output.Nodes = nodes;
+                output.Items = nodes;
             }
             return output;
         }
@@ -89,7 +89,7 @@ namespace CMS.Core
             {
                 var node = Mapper.DynamicMap<NodeDto>(await _nodeRepository.FindByIndexAsync(input.PublishmentSystemId,
                     input.NodeIndex));
-                output.Nodes.Add(node);
+                output.Items.Add(node);
                 output.Node = node;
             }
             return output;
@@ -108,7 +108,7 @@ namespace CMS.Core
             {
                 var nodes = Mapper.DynamicMap<IList<NodeDto>>(await _nodeRepository.FindByNameAsync(input.PublishmentSystemId,
                     input.NodeName));
-                output.Nodes = nodes;
+                output.Items = nodes;
             }
             return output;
         }

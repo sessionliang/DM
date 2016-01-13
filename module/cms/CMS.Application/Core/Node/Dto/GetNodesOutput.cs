@@ -12,7 +12,7 @@ namespace CMS.Core.Dto
         /// <summary>
         /// 查询集合的时候
         /// </summary>
-        public IList<NodeDto> Nodes { get; set; }
+        public IList<NodeDto> Items { get; set; }
 
         /// <summary>
         /// 数据总数

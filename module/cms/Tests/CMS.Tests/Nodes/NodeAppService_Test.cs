@@ -23,7 +23,7 @@ namespace CMS.Tests.Nodes
         public void GetNodes_PublishmentSystemId_Should_Be_1()
         {
             var output = _nodeAppService.GetNodes(new GetNodesInput() { Limit = 25, Offset = 0, PublishmentSystemId = 1 });
-            output.Nodes.ShouldAllBe(node => node.PublishmentSystemId == 1);
+            output.Items.ShouldAllBe(node => node.PublishmentSystemId == 1);
         }
     }
 }

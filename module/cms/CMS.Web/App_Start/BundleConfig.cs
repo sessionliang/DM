@@ -52,6 +52,12 @@ namespace CMS.Web
                         "~/Scripts/angular-ui/ui-bootstrap-tpls.min.js",
                         "~/Scripts/angular-ui/ui-utils.min.js",
 
+                        "~/Abp/UI/js/bootstrap.min.js?v=3.3.5",
+                        "~/Abp/UI/js/plugins/bootstrap-table/bootstrap-table.min.js",
+                        "~/Abp/UI/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js",
+                        "~/Abp/UI/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js",
+                        "~/Abp/Framework/scripts/libs/abp.bootable.js",
+
                         "~/Abp/Framework/scripts/abp.js",
                         "~/Abp/Framework/scripts/libs/abp.jquery.js",
                         "~/Abp/Framework/scripts/libs/abp.toastr.js",
