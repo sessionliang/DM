@@ -18,5 +18,14 @@ namespace CMS.Web.Controllers
         {
             return View(PageUtils.GetCMSAdminViewUrl("channel/index.cshtml"));
         }
+
+        /// <summary>
+        /// 创建栏目
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult CreateNode()
+        {
+            return View(PageUtils.GetCMSAdminViewUrl("channel/createNode.cshtml"));
+        }
     }
 }
