@@ -50,19 +50,19 @@ namespace CMS.CMSEntities
         public long ParentId { get; set; }
 
         /// <summary>
-        /// 父级节点路径
+        /// 上级栏目路径，以“,”分割
         /// </summary>
         [Required, MaxLength(255), DefaultValue("")]
         public string ParentsPath { get; set; }
 
         /// <summary>
-        /// 父级节点个数
+        /// 上级栏目数量
         /// </summary>
         [Required, DefaultValue(0)]
         public int ParentsCount { get; set; }
 
         /// <summary>
-        /// 子级节点个数
+        /// 子栏目数量
         /// </summary>
         [Required, DefaultValue(0)]
         public int ChildrenCount { get; set; }
@@ -80,13 +80,13 @@ namespace CMS.CMSEntities
         public string NodeIndexName { get; set; }
 
         /// <summary>
-        /// todo::有待补充
+        /// 所属栏目组名称集合
         /// </summary>
         [Required, MaxLength(255), DefaultValue("")]
         public string NodeGroupNameCollection { get; set; }
 
         /// <summary>
-        /// todo::有待补充
+        /// 排序
         /// </summary>
         [Required, DefaultValue(0)]
         public int Taxis { get; set; }
@@ -98,7 +98,7 @@ namespace CMS.CMSEntities
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// 内容
+        /// 栏目正文
         /// </summary>
         [Required, DefaultValue("")]
         public string Content { get; set; }
@@ -116,19 +116,19 @@ namespace CMS.CMSEntities
         public int CommentNum { get; set; }
 
         /// <summary>
-        /// 文件路径
+        /// 栏目页面地址
         /// </summary>
         [Required, MaxLength(200), DefaultValue("")]
         public string FilePath { get; set; }
 
         /// <summary>
-        /// 频道文件路径规则
+        /// 下级栏目生成页面规则
         /// </summary>
         [Required, MaxLength(200), DefaultValue("")]
         public string ChannelFilePathRule { get; set; }
 
         /// <summary>
-        /// 内容文件路径规则
+        /// 内容生成页面规则
         /// </summary>
         [Required, MaxLength(200), DefaultValue("")]
         public string ContentFilePathRule { get; set; }
