@@ -9,10 +9,11 @@
 
             vm.addNode = function () {
                 var modalInstance = $uibModal.open({
-                    templateUrl: abp.appPath + 'dm/channel/createNode',
-                    controllerAs: 'app.views.channel.createNode as vm',
-                    size: "md"
+                    templateUrl: abp.appPath + 'App/Main/views/channel/createNode.cshtml',
+                    controller: 'app.views.channel.createNode as vm',
+                    size: 'md'
                 });
+
                 modalInstance.result.then(function () {
                     vm.loadNodes();
                 });

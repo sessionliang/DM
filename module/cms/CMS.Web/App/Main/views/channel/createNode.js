@@ -1,8 +1,8 @@
 ﻿(function () {
     var controllerId = 'app.views.channel.createNode';
     angular.module('app').controller(controllerId, [
-        'app.services.app.node', '$modalInstance',
-        function (nodeService, $modalInstance) {
+        'abp.services.app.node', '$uibModalInstance',
+        function (nodeService, $uibModalInstance) {
             var vm = this;
 
             vm.node = {
@@ -14,12 +14,12 @@
                 nodeService
                     .createNode(vm.node)
                     .success(function () {
-                        $modalInstance.close();
+                        $uibModalInstance.close();
                     });
             };
 
             vm.cancel = function () {
-                $modalInstance.dismiss('cancel');
+                $uibModalInstance.dismiss('cancel');
             };
         }
     ]);
