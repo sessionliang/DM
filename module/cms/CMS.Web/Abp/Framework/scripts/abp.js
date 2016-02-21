@@ -8,6 +8,8 @@
 
     abp.pageLoadTime = new Date();
 
+    abp.publishmentSystemId = abp.publishmentSystemId || 0;
+
     //Converts given path to absolute path using abp.appPath variable.
     abp.toAbsAppPath = function (path) {
         if (path.indexOf('/') == 0) {
@@ -108,8 +110,8 @@
     abp.features = abp.features || {};
 
     abp.features.allFeatures = abp.features.allFeatures || {};
-    
-    abp.features.get = function(name) {
+
+    abp.features.get = function (name) {
         return abp.features.allFeatures[name];
     }
 
@@ -121,7 +123,7 @@
 
         return feature.value;
     }
-    
+
     abp.features.isEnabled = function (name) {
         var value = abp.features.getValue(name);
         return value == 'true' || value == 'True';
@@ -306,11 +308,11 @@
 
     /* SIMPLE EVENT BUS *****************************************/
 
-    abp.event = (function() {
+    abp.event = (function () {
 
         var _callbacks = {};
 
-        var on = function(eventName, callback) {
+        var on = function (eventName, callback) {
             if (!_callbacks[eventName]) {
                 _callbacks[eventName] = [];
             }
@@ -318,7 +320,7 @@
             _callbacks[eventName].push(callback);
         };
 
-        var trigger = function(eventName) {
+        var trigger = function (eventName) {
             var callbacks = _callbacks[eventName];
             if (!callbacks || !callbacks.length) {
                 return;
@@ -379,6 +381,17 @@
         }
 
         return str;
+    };
+
+    abp.utils.getQueryStr = function (parm) {
+        var vars = [], hash;
+        var hashes = top.location.href.slice(top.location.href.indexOf('?') + 1).split('&');
+        for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars[parm];
     };
 
 })();

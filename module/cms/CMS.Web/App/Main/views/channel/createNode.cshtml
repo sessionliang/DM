@@ -1,21 +1,38 @@
 ﻿<div>
     <div class="modal-header">
-        <h3 class="modal-title">Create new node!</h3>
+        <h3 class="modal-title">添加栏目</h3>
     </div>
     <div class="modal-body">
         <form class="form-horizontal">
             <fieldset>
                 <div class="form-group">
-                    <label for="NodeNameInput" class="col-lg-2 control-label">NodeName:</label>
+                    <label for="ParentNode" class="col-lg-2 control-label">父级栏目:</label>
                     <div class="col-lg-10">
-                        <input ng-model="vm.node.nodeName" type="text" class="form-control" name="NodeNameInput" placeholder="Enter title here">
+                        <select ng-model="vm.node.parentNodeId" name="ParentNodeId" data-placeholder="选择父级栏目" class="chosen-select">
+                            <option value="0">请选择父级栏目</option>
+                            <option value="1" hassubinfo="true">北京</option>
+                            <option value="2" hassubinfo="true">天津</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="NodeIndexNameInput" class="col-lg-2 control-label">NodeIndexName:</label>
+                    <label for="NodeNameInput" class="col-lg-2 control-label">栏目名称:</label>
                     <div class="col-lg-10">
-                        <textarea ng-model="vm.node.nodeIndexName" class="form-control" rows="5" name="NodeIndexNameInput" placeholder="Describe your node here"></textarea>
-                        <span class="help-block">Please search your node before creating new one. You can add code snippets and images to describe your problem cleaner.</span>
+                        <input ng-model="vm.node.nodeName" type="text" class="form-control" name="NodeNameInput" placeholder="Enter NodeName here">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="NodeNameInput" class="col-sm-4">将栏目名称作为索引:</label>
+                    <div class="col-sm-5">
+                        <div class="switch">
+                            <div class="onoffswitch">
+                                <input type="checkbox" class="onoffswitch-checkbox" id="example2">
+                                <label class="onoffswitch-label" for="example2">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </fieldset>
@@ -26,3 +43,6 @@
         <button class="btn btn-primary" ng-click="vm.save()">Submit node</button>
     </div>
 </div>
+<script>
+    $(".chosen-select").chosen({ width: "95%" });
+</script>

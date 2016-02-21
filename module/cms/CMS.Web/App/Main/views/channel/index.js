@@ -28,7 +28,7 @@
                     {
                         url: "/api/services/app/node/getNodes",
                         queryParams: function (params) {
-                            params["publishmentSystemId"] = 1;
+                            params["publishmentSystemId"] = abp.publishmentSystemId;
                             return params;
                         },
                         sortName: vm.sorting

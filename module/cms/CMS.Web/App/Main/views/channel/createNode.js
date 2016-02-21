@@ -7,7 +7,8 @@
 
             vm.node = {
                 nodeName: '',
-                nodeIndexName: ''
+                nodeIndexName: '',
+                parentNodeId: abp.publishmentSystemId
             };
 
             vm.save = function () {
