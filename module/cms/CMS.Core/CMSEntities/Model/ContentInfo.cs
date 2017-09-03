@@ -20,25 +20,25 @@ namespace CMS.CMSEntities
         public int NodeId { get; set; }
 
         /// <summary>
-        /// 系统发布ID
+        /// 站点主键ID
         /// </summary>
         [Required, DefaultValue(0)]
         public int PublishmentSystemId { get; set; }
 
         /// <summary>
-        /// todo::有待补充
+        /// 排序
         /// </summary>
         [Required, DefaultValue(0)]
         public int Taxis { get; set; }
 
         /// <summary>
-        /// todo::有待补充
+        /// 标记
         /// </summary>
         [Required, MaxLength(255), DefaultValue("")]
         public string Tags { get; set; }
 
         /// <summary>
-        /// todo::有待补充
+        /// 所属内容组集合
         /// </summary>
         [Required, MaxLength(255), DefaultValue("")]
         public string ContentGroupNameCollection { get; set; }
@@ -56,13 +56,13 @@ namespace CMS.CMSEntities
         public int ReferenceId { get; set; }
 
         /// <summary>
-        /// 是否通过审核
+        /// 是否审核通过
         /// </summary>
         [Required, MaxLength(18), DefaultValue("")]
         public string IsChecked { get; set; }
 
         /// <summary>
-        /// 审核级别
+        /// 审核通过级别
         /// </summary>
         [Required, DefaultValue(0)]
         public int CheckedLevel { get; set; }
@@ -117,25 +117,25 @@ namespace CMS.CMSEntities
         public DateTime LastHitsDate { get; set; }
 
         /// <summary>
-        /// XML设置
+        /// 扩展字段
         /// </summary>
-        [Required,  DefaultValue("")]
+        [Required, DefaultValue("")]
         public string SettingsXml { get; set; }
 
         /// <summary>
-        /// 标题
+        /// 内容标题
         /// </summary>
         [Required, MaxLength(255), DefaultValue("")]
         public string Title { get; set; }
 
         /// <summary>
-        /// 子标题
+        /// 内容副标题
         /// </summary>
         [Required, MaxLength(255), DefaultValue("")]
         public string SubTitle { get; set; }
 
         /// <summary>
-        /// 图片路径
+        /// 内容图片地址
         /// </summary>
         [Required, MaxLength(200), DefaultValue("")]
         public string ImageUrl { get; set; }
@@ -143,11 +143,11 @@ namespace CMS.CMSEntities
         /// <summary>
         /// 视频路径
         /// </summary>
-        [Required,MaxLength(200), DefaultValue("")]
+        [Required, MaxLength(200), DefaultValue("")]
         public string VideoUrl { get; set; }
 
         /// <summary>
-        /// 文件路径
+        /// 内容附件地址
         /// </summary>
         [Required, MaxLength(255), DefaultValue("")]
         public string FileUrl { get; set; }
@@ -159,7 +159,7 @@ namespace CMS.CMSEntities
         public string LinkUrl { get; set; }
 
         /// <summary>
-        /// 内容
+        /// 内容正文
         /// </summary>
         [Required, DefaultValue("")]
         public string Content { get; set; }
@@ -167,7 +167,7 @@ namespace CMS.CMSEntities
         /// <summary>
         /// 概要
         /// </summary>
-        [Required,  DefaultValue("")]
+        [Required, DefaultValue("")]
         public string Summary { get; set; }
 
         /// <summary>
@@ -183,25 +183,25 @@ namespace CMS.CMSEntities
         public string Source { get; set; }
 
         /// <summary>
-        /// 是否推荐
+        /// 是否推荐内容
         /// </summary>
         [Required, MaxLength(18), DefaultValue("")]
         public string IsRecommend { get; set; }
 
         /// <summary>
-        /// 是否热门
+        /// 是否热点内容
         /// </summary>
         [Required, MaxLength(18), DefaultValue("")]
         public string IsHot { get; set; }
 
         /// <summary>
-        /// 是否变色
+        /// 是否醒目内容
         /// </summary>
         [Required, MaxLength(18), DefaultValue("")]
         public string IsColor { get; set; }
 
         /// <summary>
-        /// 是否置顶
+        /// 是否置顶内容
         /// </summary>
         [Required, MaxLength(18), DefaultValue("")]
         public string IsTop { get; set; }
@@ -216,7 +216,7 @@ namespace CMS.CMSEntities
         /// </summary>
         public DateTime UnCheckTaskDate { get; set; }
 
-        #region 字段对照 
+        #region 字段对照
         //[ID] [int] IDENTITY(1,1) NOT NULL,
         //[NodeID] [int] NOT NULL DEFAULT ((0)),
         //[PublishmentSystemID] [int] NOT NULL DEFAULT ((0)),
